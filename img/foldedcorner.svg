@@ -1,0 +1,56 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .page-body {
+        fill: #FFFFFF; /* White paper */
+        stroke: #FFFFFF; /* Light gray border for definition */
+        stroke-width: 10;
+      }
+      .page-line {
+        stroke: #d9b10d; /* Light red for the margin line */
+        stroke-width: 5;
+      }
+      .page-ruled-line {
+        stroke: #FFFFFF; /* Very light gray for the ruled lines */
+        stroke-width: 1;
+      }
+      .crooked-corner {
+        fill: #d9b10d; /* Slightly darker white for the folded corner */
+        stroke: #AAAAAA;
+        stroke-width: 0;
+        filter:url(#shadow); /* Apply a shadow to the corner for depth */
+      }
+      .crooked-corner-page {
+        fill: #f1c50e;
+      }
+      .crooked-corner-inner-shadow {
+         filter:url(#innerShadow);
+      }
+    </style>
+
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="1.5" dy="1.5" stdDeviation="1" flood-color="#000000" flood-opacity="0.2"></feDropShadow>
+    </filter>
+
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"></feGaussianBlur>
+      <feOffset dx="-1" dy="-1" in="blur" result="offsetBlur"></feOffset>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="arithmetic" k2="-1" k3="1" result="compositeResult"></feComposite>
+      <feFlood flood-color="#000000" flood-opacity="0.1" result="floodColor"></feFlood>
+      <feComposite in="floodColor" in2="compositeResult" operator="in" result="shadowClipped"></feComposite>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+        <feMergeNode in="shadowClipped"></feMergeNode>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+    <rect x="70" y="100" width="150" height="200" rx="3" ry="3" class="page-body crooked-corner-inner-shadow"></rect>
+    <line x1="100" y1="150" x2="150" y2="150" class="page-line"></line>
+    <line x1="100" y1="230" x2="200" y2="230" class="page-line"></line>
+    <line x1="100" y1="190" x2="200" y2="190" class="page-line"></line>
+    <line x1="100" y1="270" x2="200" y2="270" class="page-line"></line>
+    <polygon xmlns="http://www.w3.org/2000/svg" points="160,160 160,95 225,160" class="crooked-corner"/>
+    <polygon points="160,90 230,90 230,160" class="crooked-corner-page"></polygon>
+</svg>

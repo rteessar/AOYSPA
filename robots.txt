@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Sitemap
+Sitemap: https://angeloy.fi/sitemap.xml

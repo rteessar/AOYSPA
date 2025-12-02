@@ -1,0 +1,293 @@
+/* ========================================
+   ANGEL FINANCIAL SERVICES - COMPLETE STYLES
+   ======================================== */
+
+/* === BASE STYLES === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.text-gray-500 {
+    white-space: pre-line;
+}
+
+/* === NAVIGATION === */
+.nav-link.active {
+    color: #d9b10d;
+    font-weight: 600;
+}
+
+.lang-btn {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+    opacity: 1;
+}
+
+/* === SWIPER / SLIDER === */
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.swiper .swiper-parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 130%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+/* === PARALLAX BACKGROUNDS === */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* iOS fix - parallax doesn't work on mobile iOS */
+@supports (-webkit-touch-callout: none) {
+    .parallax-bg {
+        background-attachment: scroll;
+    }
+}
+
+/* === SCROLL ANIMATIONS === */
+.reveal,
+.reveal-slide-left,
+.reveal-slide-right {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+}
+
+.reveal {
+    transform: translateY(50px);
+}
+
+.reveal-slide-left {
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-slide-right {
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible,
+.reveal-slide-left.visible,
+.reveal-slide-right.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* === PAGE MANAGEMENT === */
+.page.hidden {
+    display: none;
+}
+
+/* === MODAL === */
+#team-modal.hidden {
+    display: none;
+}
+
+#team-modal-content {
+    animation: slide-up 0.4s ease-out;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* === LOADING STATES === */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* === IMAGE ERROR HANDLING === */
+
+
+/* === FOCUS STYLES (Accessibility) === */
+a:focus,
+button:focus {
+    outline: 2px solid #f1c50e;
+    outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .swiper-parallax-bg {
+        transform: none !important;
+    }
+}
+
+/* === PRINT STYLES === */
+@media print {
+    header,
+    footer,
+    .nav-link,
+    button,
+    #mobile-menu,
+    #team-modal {
+        display: none !important;
+    }
+    
+    .page {
+        display: block !important;
+    }
+    
+    .page.hidden {
+        display: block !important;
+    }
+}
+
+/* === UTILITY CLASSES === */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* === FORM STATES === */
+.form-success {
+    border-color: #22c55e !important;
+    background-color: #f0fdf4;
+}
+
+.form-error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2;
+}
+
+.form-message {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.form-message.success {
+    color: #15803d;
+    background-color: #f0fdf4;
+    border: 1px solid #22c55e;
+}
+
+.form-message.error {
+    color: #dc2626;
+    background-color: #fef2f2;
+    border: 1px solid #ef4444;
+}
+
+.select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* === TEAM MEMBER CARDS === */
+.team-member-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-card:focus {
+    outline: 2px solid #f1c50e;
+    outline-offset: 4px;
+}
+
+/* === BUTTON HOVER EFFECTS === */
+button {
+    transition: all 0.3s ease;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* === SMOOTH SCROLLING === */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* === MOBILE MENU === */
+#mobile-menu {
+    transition: opacity 0.3s ease;
+}
+
+/* === SKIP TO CONTENT (Accessibility) === */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #f1c50e;
+    color: #333;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}

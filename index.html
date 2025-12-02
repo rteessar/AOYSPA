@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="fi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- SEO Meta Tags -->
+    <title>Angel Financial Services Oy - Taloudellinen Kumppanisi</title>
+    <meta name="description" content="Angel Financial Services Oy tarjoaa kirjanpito-, vero- ja yritysneuvontapalveluja Suomessa. Autamme yritystäsi menestymään.">
+    <meta name="keywords" content="kirjanpito, taloushallinto, palkanlaskenta, yrityksen perustaminen, tilinpäätös, verosuunnittelu, kirjanpitopalvelut suomi">
+    <meta name="author" content="Angel Financial Services Oy">
+    
+    <!-- Open Graph Meta Tags (Social Media) -->
+    <meta property="og:title" content="Angel Financial Services Oy - Taloudellinen Kumppanisi">
+    <meta property="og:description" content="Ammattitaiset kirjanpito-, palkanlaskenta- ja yritysrekisteröintipalvelut Suomessa.">
+    <meta property="og:url" content="https://angeloy.fi">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fi_FI">
+    <meta property="og:site_name" content="Angel Financial Services Oy">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Angel Financial Services Oy - Taloudellinen Kumppanisi">
+    <meta name="twitter:description" content="Ammattitaiset kirjanpito- ja yrityspalvelut Suomessa.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://angeloy.fi">
+    
+    
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Angel Financial Services Oy",
+      "url": "https://angeloy.fi",
+      "description": "Kirjanpito, palkanlaskenta ja yrityspalvelut",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FI"
+      },
+      "priceRange": "$",
+      "telephone": "+358 40 129 1041",
+      "email": "info@angeloy.fi",
+      "areaServed": "FI",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Palvelut",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kuukausikirjanpito",
+              "description": "Ammattitainen juokseva kirjanpito yrityksellesi"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Palkanlaskenta",
+              "description": "Tarkka ja luotettava palkanlaskentapalvelu"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Yritysrekisteröinti",
+              "description": "Autamme yrityksen perustamisessa ja rekisteröinnissä"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <script>
+// Dynamic meta tag updates for SPA sections
+window.addEventListener('hashchange', function() {
+    const hash = window.location.hash.substring(1) || 'koti';
+    updateMetaTags(hash);
+});
+
+function updateMetaTags(page) {
+    const metaData = {
+        koti: {
+            title: 'Angel Financial Services Oy - Kirjanpito ja Taloushallinto Helsinki',
+            description: 'Ammattitaiset kirjanpito-, palkanlaskenta- ja yrityspalvelut Helsingissä. Yli 10 vuoden kokemus, 300+ tyytyväistä asiakasta. Soita +358 40 129 1041'
+        },
+        palvelut: {
+            title: 'Palvelut - Kirjanpito, Palkanlaskenta, Yritysrekisteröinti | Angel Oy',
+            description: 'Kattavat taloushallinnon palvelut: kuukausikirjanpito, tilinpäätös, palkanlaskenta, yritysrekisteröinti, verosuunnittelu ja konsultointi Helsingissä.'
+        },
+        meista: {
+            title: 'Meistä - Angel Financial Services Oy | Talouskumppanisi',
+            description: 'Luotettava taloushallinnon kumppani pienille ja keskisuurille yrityksille Suomessa. Palvelemme viidellä kielellä ja tarjoamme digitaaliset palvelut.'
+        },
+        tiimi: {
+            title: 'Tiimimme - Kokeneet Kirjanpitäjät ja Asiantuntijat | Angel Oy',
+            description: 'Tutustuu monikulttuuriseen asiantuntijatiimimme: kokeneet kirjanpitäjät, veroneuvojat ja yritysstrategit, jotka auttavat yrityksesi menestyksessä.'
+        },
+        yhteystiedot: {
+            title: 'Yhteystiedot - Ota Yhteyttä | Angel Financial Services Oy Helsinki',
+            description: 'Ota yhteyttä taloushallinnon ammattilaisiin. Puh: +358 40 129 1041 | Ruosilantie 1 A, Helsinki. Avoinna ma-to 10-16. Ilmainen konsultaatio!'
+        }
+    };
+
+    if (metaData[page]) {
+        document.title = metaData[page].title;
+        document.querySelector('meta[name="description"]').setAttribute('content', metaData[page].description);
+        document.querySelector('link[rel="canonical"]').setAttribute('href', `https://angeloy.fi/#${page}`);
+        
+        // Update Open Graph tags
+        document.querySelector('meta[property="og:title"]').setAttribute('content', metaData[page].title);
+        document.querySelector('meta[property="og:description"]').setAttribute('content', metaData[page].description);
+        document.querySelector('meta[property="og:url"]').setAttribute('content', `https://angeloy.fi/#${page}`);
+    }
+}
+
+// Run on initial load
+document.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash.substring(1) || 'koti';
+    updateMetaTags(hash);
+});
+</script>
+    
+    <!-- Google Analytics (Replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKFD5FNL62"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KKFD5FNL62', {
+        'anonymize_ip': true
+      });
+    </script>
+    
+    <link rel="icon" type="image/png" href="img/HeadLogo.png">
+    
+        <!-- Include DOMPurify BEFORE your script.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-gray': '#f4f4f4',
+            'brand-dark': '#333333',
+            'brand-yellow': '#f1c50e',
+          }
+        }
+      }
+    }
+    </script>
+
+    <!-- Swiper.js for Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-40 w-full">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#koti" onclick="Navigation.showPage('koti')" aria-label="Angel Financial Services - Etusivu">
+                         <img src="img/HeaderLogo.png" alt="Angel Financial Services Logo" class="h-16 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav & Contact -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="text-right">
+                        <!-- Language Flags -->
+                        <div class="flex justify-end space-x-3 mb-1" id="lang-switcher" role="group" aria-label="Kielivalinta">
+                             <button title="Vaihda Suomeksi" aria-label="Vaihda suomen kielelle" class="lang-btn" onclick="Translation.set('fi')"> <img src="img/fin.png" width="32" height="24" alt="finnish flag button">
+                               <!--  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-8 rounded-sm" viewBox="0 0 512 512" aria-hidden="true"><path fill="#fff" d="M0 0h512v512H0z"/><path fill="#003580" d="M0 192h512v128H0z"/><path fill="#003580" d="M128 0h128v512H128z"/></svg> -->
+                            </button>
+                            <button title="Switch to English" aria-label="Switch to English language" class="lang-btn" onclick="Translation.set('en')"> <img src="img/eng.svg" width="32" height="24" alt="English flag button">
+                                <!--<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-8 rounded-sm" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="a"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="b"><path d="M0 0v30h60V0z"/></clipPath><g clip-path="url(#a)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#b)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg> -->
+                            </button>
+                            <!-- <button title="Switch to Estonian" aria-label="Vaheta eesti keelele" class="lang-btn" onclick="Translation.set('et')">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-8 rounded-sm" viewBox="0 0 5 3" aria-hidden="true"><path fill="#000" d="M0 0h5v3H0z"></path><path fill="#1695d7" d="M0 0h5v1H0z"></path><path fill="#fff" d="M0 2h5v1H0z"></path></svg>
+                            </button> -->
+                        </div>
+                        <!-- Phone Number
+                        <a href="tel:+358401291041" class="font-semibold text-brand-dark hover:text-brand-yellow transition-colors" aria-label="Soita meille">+358 40 129 1041</a>-->
+                    </div>
+                    <!-- Desktop Menu -->
+                    <nav class="flex items-center space-x-8" id="desktop-menu" aria-label="Päävalikko">
+                        <a href="#koti" onclick="Navigation.showPage('koti')" class="nav-link text-lg font-medium hover:text-brand-yellow transition-colors active" data-translate="nav_koti">Koti</a>
+                        <a href="#palvelut" onclick="Navigation.showPage('palvelut')" class="nav-link text-lg font-medium hover:text-brand-yellow transition-colors" data-translate="nav_palvelut">Palvelut</a>
+                        <a href="#meista" onclick="Navigation.showPage('meista')" class="nav-link text-lg font-medium hover:text-brand-yellow transition-colors" data-translate="nav_meista">Meistä</a>
+                        <a href="#tiimi" onclick="Navigation.showPage('tiimi')" class="nav-link text-lg font-medium hover:text-brand-yellow transition-colors" data-translate="nav_tiimi">Tiimi</a>
+                        <a href="#yhteystiedot" onclick="Navigation.showPage('yhteystiedot')" class="nav-link text-lg font-medium hover:text-brand-yellow transition-colors" data-translate="nav_yhteystiedot">Yhteystiedot</a>
+                    </nav>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 rounded-md text-brand-dark" aria-label="Avaa valikko" aria-expanded="false">
+                        <span class="font-bold text-sm tracking-widest" data-translate="menu_text">MENU</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU (Full screen overlay) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50 p-6" role="dialog" aria-modal="true" aria-label="Mobiilivalikko">
+        <div class="flex justify-between items-center mb-12">
+            <img src="img/HeaderLogo.png" alt="Angel Financial Services Logo" class="h-14 w-auto">
+            <button id="mobile-menu-close-button" class="p-2" aria-label="Sulje valikko">
+                <span class="font-bold text-3xl">&times;</span>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center space-y-8 text-center" aria-label="Päävalikko">
+            <a href="#koti" class="mobile-nav-link text-3xl font-bold hover:text-brand-yellow transition-colors" data-translate="nav_koti">Koti</a>
+            <a href="#palvelut" class="mobile-nav-link text-3xl font-bold hover:text-brand-yellow transition-colors" data-translate="nav_palvelut">Palvelut</a>
+            <a href="#meista" class="mobile-nav-link text-3xl font-bold hover:text-brand-yellow transition-colors" data-translate="nav_meista">Meistä</a>
+            <a href="#tiimi" class="mobile-nav-link text-3xl font-bold hover:text-brand-yellow transition-colors" data-translate="nav_tiimi">Tiimi</a>
+            <a href="#yhteystiedot" class="mobile-nav-link text-3xl font-bold hover:text-brand-yellow transition-colors" data-translate="nav_yhteystiedot">Yhteystiedot</a>
+        </nav>
+        <div class="absolute bottom-10 left-0 right-0 px-6">
+            <div class="flex justify-center space-x-4 mb-6" id="mobile-lang-switcher" role="group" aria-label="Kielivalinta">
+                <!-- Language flags are cloned here by JavaScript -->
+            </div>
+            <!--<a href="tel:+358401291041" class="block text-center font-semibold text-brand-dark hover:text-brand-yellow transition-colors text-xl">+358 40 129 1041</a>-->
+        </div>
+    </div>
+
+    <!-- PAGE CONTAINER -->
+    <div id="page-container">
+
+        <!-- KOTI PAGE -->
+        <main data-page-id="koti" class="page">
+            
+            <!-- Section 1: Hero Slider -->
+            <section class="relative h-[calc(100vh-6rem)] w-full">
+                <div class="swiper hero-slider h-full">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="swiper-parallax-bg" style="background-image:url('img/slide1.jpg')" role="img" aria-label="Taustakuva toimistosta"></div>
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white px-4 relative z-10">
+                                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-black" data-swiper-parallax="-300" data-translate="hero1_title">Ensilento rajattomiin korkeuksiin, taloudelliset suojelusenkelisi.</h1>
+                                <p class="text-xl md:text-2xl mt-4 max-w-3xl text-black/90" data-swiper-parallax="-200" data-translate="hero1_subtitle">Opastamme yrityksesi menestymään Suomessa.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                             <div class="swiper-parallax-bg" style="background-image:url('img/slide2-min.jpg')" role="img" aria-label="Taustakuva tiimistä"></div>
+                             <div class="absolute inset-0 bg-black/30"></div>
+                             <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white px-4 relative z-10">
+                                <p class="text-xl md:text-2xl" data-swiper-parallax="-200" data-translate="hero2_subtitle">Hyödy yli 6 vuoden erityisasiantuntemuksestamme suomalaisessa kirjanpidossa.</p>
+                                <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold mt-2" data-swiper-parallax="-300" data-translate="hero2_title">Asiantuntemuksemme on luotettava etusi.</h2>
+                                <div data-swiper-parallax="-100" class="mt-8">
+                                    <button onclick="Navigation.showPage('yhteystiedot')" class="bg-brand-yellow text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-black transition-all duration-300 transform hover:scale-105" data-translate="contact_button">Ota yhteyttä</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slider Navigation Arrows -->
+                    <div class="swiper-button-prev text-white" aria-label="Edellinen"></div>
+                    <div class="swiper-button-next text-white" aria-label="Seuraava"></div>
+                </div>
+            </section>
+            
+            <!-- Section 2: Why Choose Us -->
+            <section class="bg-gray-100 py-20 lg:py-28">
+                <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-black reveal-slide-left" data-translate="why_us_title">Miksi valita Angel Financial Services?</h2>
+                        <p class="text-lg text-gray-700 reveal" data-translate="why_us_text">Angel Oy:ssä omaksumme eteenpäin katsovan lähestymistavan, joka perustuu tulevaisuuden potentiaaliin.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Box 1 -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg text-center reveal" style="transition-delay: 100ms;">
+                            <div class="w-20 h-20 bg-brand-yellow rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white mb-6" aria-hidden="true">1</div>
+                            <p class="text-lg text-[#333333]" data-translate="why_us_box1">Autamme sinua kaikessa osakeyhtiön (Oy) ja yksityisen yrityksen rekisteröintiin liittyvässä.</p>
+                        </div>
+                        <!-- Box 2 -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg text-center reveal" style="transition-delay: 200ms;">
+                            <div class="w-20 h-20 bg-brand-yellow rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white mb-6" aria-hidden="true">2</div>
+                            <p class="text-lg text-[#333333]" data-translate="why_us_box2">Hoidamme puolestasi kuukausikirjanpidon, ALV-laskelmat, ALV-raportit ja palkanlaskennan.</p>
+                        </div>
+                        <!-- Box 3 -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg text-center reveal" style="transition-delay: 300ms;">
+                            <div class="w-20 h-20 bg-brand-yellow rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white mb-6" aria-hidden="true">3</div>
+                            <p class="text-lg text-[#333333]" data-translate="why_us_box3">Kun sinä kehität ydinliiketoimintaasi, me huolehdimme taloudellisista monimutkaisuuksista.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 3: Services Grid -->
+            <section class="parallax-bg py-20 lg:py-28 relative" style="background-image: url('img/parallax.jpg');">
+                 <div class="absolute inset-0 bg-white/10"></div>
+                 <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg reveal">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center">
+                                    <img src="img/stacked_papers.svg" alt="Three stacked paper sheets">
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-black mb-2" data-translate="service1_title">Yritysrekisteröinti</h3>
+                                    <p class="text-black/80" data-translate="service1_text">Yrityksen perustaminen voi olla ylivoimaista. Jos sinulla on loistava liikeidea, mutta olet ep-varma oikeasta yhtiömuodosta tai koet rekisteröinnin hämmentäväksi, älä huoli – me autamme sinua. Prosessiin liittyy usein byrokraattisia menettelyjä ja koordinointia eri viranomaisten kanssa, minkä voit jättää meidän huoleksemme.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg reveal" style="transition-delay: 100ms;">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center"><img src="img/MonthlyAccounting.svg" alt="Monthly Accounting">
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-black mb-2" data-translate="service2_title">Kuukausikirjanpito</h3>
+                                    <p class="text-black/80" data-translate="service2_text">Angel Financial Services Oy:ssä tarjoamme kattavan kuukausikirjanpitopalvelun, joka varmistaa, että talousasiasi ovat ammattitaitoisissa käsissä. Tiimimme kirjaa kaikki ostosi ja myyntisi nykyaikaisiin tietokonejärjestelmiimme. Laadimme yksityiskohtaiset tuloslaskelmat antaaksemme selkeän kuvan taloudellisesta tilanteestasi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg reveal" style="transition-delay: 200ms;">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center"><img src="img/foldedcorner.svg" alt="Financial Statements and Customized accounting"></div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-black mb-2" data-translate="service3_title">Tilinpäätös ja räätälöity kirjanpito</h3>
+                                    <p class="text-black/80" data-translate="service3_text">Yrityksen omistajana saatat usein tarkastella laajoja edellisen vuoden raportteja arvioidaksesi voittoasi tai tappiotasi. Omistautunut tiimimme yksinkertaistaa tämän prosessin puolestasi. Luomme raportit ja autamme sinua analysoimaan niitä.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg reveal" style="transition-delay: 300ms;">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center"><img src="img/lightbulb.svg" alt="Consultations and strategic advice"></div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-black mb-2" data-translate="service4_title">Konsultaatiot ja strateginen neuvonta</h3>
+                                    <p class="text-black/80" data-translate="service4_text">Asiantuntijamme eri taustoilta auttavat sinua arvioimaan taloudellista tilannettasi ja tarjoavat arvokkaita näkemyksiä sekä neuvoja liiketoimintaasi. Olemme täällä auttaaksemme sinua. Olipa kyse sitten säännösten noudattamisesta, talousstrategioiden optimoinnista tai operatiivisten esteiden voittamisesta, tarjoamme toteuttamiskelpoisia ratkaisuja, jotka vastaavat juuri sinun yrityksesi tarpeita.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg reveal" style="transition-delay: 400ms;">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center"><img src="img/msn.svg" alt="teamwork"></div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-black mb-2" data-translate="service5_title">Älykäs palkanlaskenta ja henkilöstöhallinnon ratkaisut</h3>
+                                    <p class="text-black/80" data-translate="service5_text">Angel Oy:n palkanlaskentapalvelun tarkoituksena on varmistaa, että työntekijöillesi maksetaan korvaus tarkasti ja kaikkien lakisääteisten vaatimusten mukaisesti. Asiantuntijatiimimme laskee palkat ja palkkiot ammattitaitoisesti noudattaen Suomen työlakeja, työehtosopimuksia ja ammattiliittojen säännöksiä. Tämä auttaa sinua ylläpitämään positiivisia suhteita työntekijöihisi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg reveal" style="transition-delay: 500ms;">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center"><img src="img/Stopper.svg" alt="Optimizing"></div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-black mb-2" data-translate="service6_title">Verosuunnittelu ja optimointi</h3>
+                                    <p class="text-black/80" data-translate="service6_text">Tarjoamme asiantuntevia verosuunnittelustrategioita auttaaksemme yrityksiä vähentämään verovelvoitteita, maksimoimaan vähennyksiä ja varmistamaan täyden noudattamisen Suomen verolakien mukaisesti. Henkilökohtainen lähestymistapamme mahdollistaa tehokkaan verotuksen ennakoinnin ja suunnittelun, varmistaen että yritykset voivat tehdä tietoon perustuvia taloudellisia päätöksiä.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 4: Statistics & CTA -->
+            <section class="bg-gray-100 py-20 lg:py-28 overflow-hidden">
+                <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-black" data-translate="consult_title">Konsultoimme johtajia strategiassa</h2>
+                        <p class="text-xl mt-4 text-gray-700" data-translate="consult_subtitle">Sinun kasvusuhdanteesi, meidän intohimomme.</p>
+                    </div>
+                    <div class="relative reveal">
+                        <!-- Stat Boxes Grid -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 w-full lg:w-11/12 mx-auto relative z-10 mb-[-60px] md:mb-[-80px]">
+                            <div class="bg-white p-6 text-center rounded-lg shadow-xl">
+                                <p class="text-gray-500 uppercase tracking-wider text-sm" data-translate="stat1_title">Vuosien kokemus</p>
+                                <p class="text-5xl font-extrabold text-brand-yellow mt-1">10+</p>
+                            </div>
+                            <div class="bg-white p-6 text-center rounded-lg shadow-xl">
+                                <p class="text-gray-500 uppercase tracking-wider text-sm" data-translate="stat3_title">Tyytyväiset asiakkaat</p>
+                                <p class="text-5xl font-extrabold text-brand-yellow mt-1">300+</p>
+                            </div>
+                            <div class="bg-white p-6 text-center rounded-lg shadow-xl">
+                                <p class="text-gray-500 uppercase tracking-wider text-sm" data-translate="stat4_title">Perustetut yritykset</p>
+                                <p class="text-5xl font-extrabold text-brand-yellow mt-1">180+</p>
+                            </div>
+                            <div class="bg-white p-6 text-center rounded-lg shadow-xl">
+                                <p class="text-gray-500 uppercase tracking-wider text-sm" data-translate="stat2_title">Palvelukieliä</p>
+                                <p class="text-5xl font-extrabold text-brand-yellow mt-1">5</p>
+                                <div class="mt-3 grid grid-cols-3 md:grid-cols-5 items-center justify-center gap-1">
+    
+                                    <img class="w-8 h-auto rounded-sm" 
+                                     src="img/Flag_of_Finland.svg" 
+                                    alt="Finnish flag">
+         
+                                    <img class="w-8 h-auto rounded-sm" 
+                                    src="img/Flag_of_the_United_Kingdom.svg" 
+                                    alt="Palvelemme englanniksi - English" width="50" height="33" loading="lazy">
+                                    
+                                    <img class="w-8 h-auto rounded-sm" 
+                                    src="img/Flag_of_Estonia.png" 
+                                    alt="Palvelemme viroksi - Eesti keel" width="50" height="33" loading="lazy">
+                                    
+                                    <img class="w-8 h-auto rounded-sm" 
+                                    src="img/Flag_of_India.png" 
+                                    alt="Palvelemme hindiksi - हिंदी और" width="50" height="33" loading="lazy">
+         
+                                    <img class="w-8 h-auto rounded-sm" 
+                                    src="img/Flag_of_Yemen.png" 
+                                    alt="Palvelemme arabiaksi - العربية" width="50" height="33" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <img src="img/lower.jpg" alt="Angel Financial Services asiantuntijatiimi työskentelemässä asiakkaiden kanssa" class="rounded-lg shadow-2xl w-full">
+                    </div>
+                    <div class="text-center mt-16 reveal">
+                        <button onclick="Navigation.showPage('yhteystiedot')" class="bg-brand-yellow text-white font-bold py-4 px-10 rounded-lg text-xl hover:bg-black transition-all duration-300 transform hover:scale-105" data-translate="contact_button_2">Ota yhteyttä</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- PALVELUT PAGE -->
+        <main data-page-id="palvelut" class="page hidden">
+            <!-- Section 1: Hero -->
+            <section class="parallax-bg h-[60vh] relative flex items-center justify-center overflow-hidden" style="background-image: url('img/palvelut-hero-min.jpg');">
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="text-left relative z-10 px-4">
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight">
+                        <span class="block">
+                            <span class="text-black" data-translate="palvelut_hero_slogan1_1">Sinun</span> <span class="text-brand-yellow" data-translate="palvelut_hero_slogan1_2">matkasi,</span>
+                        </span>
+                        <span class="block md:ml-20">
+                             <span class="text-black" data-translate="palvelut_hero_slogan2_1">Meidän</span> <span class="text-brand-yellow" data-translate="palvelut_hero_slogan2_2">tietämyksemme.</span>
+                        </span>
+                    </h1>
+                </div>
+            </section>
+
+            <!-- Spacer -->
+            <div class="bg-white py-12 lg:py-16">
+                <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-brand-yellow to-transparent" />
+            </div>
+            
+            <!-- Section 2: Yrityksen rekisteröinti -->
+            <section class="parallax-bg py-20 lg:py-28 relative overflow-hidden" style="background-image: url('img/service1-bg.jpg');">
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-xl shadow-2xl reveal">
+                        <h2 class="text-2xl sm:text-4xl font-bold text-black mb-6 text-center" data-translate="palvelut_s2_title">Yrityksen rekisteröinti</h2>
+                        <div class="prose prose-lg max-w-none text-gray-800" data-translate="palvelut_s2_text">
+                            <p>Yrityksen perustaminen voi olla ylivoimaista. Jos sinulla on loistava liikeidea, mutta olet ep-varma oikeasta yhtiömuodosta tai rekisteröinti tuntuu hämmentävältä, älä huoli – et ole yksin. Prosessiin liittyy usein byrokraattisia menettelyjä ja koordinointia eri viranomaisten kanssa, jolloin saatat miettiä, mistä ja miten aloittaa yrittäjän matkasi.</p>
+                            <p>Angel Financial Services Oy:ssä ymmärrämme nämä haasteet ja olemme täällä yksinkertaistamassa tätä matkaa puolestasi. Asiantuntijamme opastavat sinua yrityksen ilmoittamis- ja rekisteröintiprosessissa vapauttaen sinut hallinnollisista taakoista. Tarjoamme arvokkaita neuvoja auttaaksemme sinua määrittämään toimintaasi parhaiten soveltuvan yhtiömuodon. Mietitkö toiminimeä vai osakeyhtiötä(Oy)? Oletko huolissasi lakisääteisistä vaatimuksista ja vaatimustenmukaisuudesta? Annamme vastauksia näihin kysymyksiin varmistaen, että voit perustaa uuden yrityksesi vankalle pohjalle, varustettuna menestyksekkääseen aloitukseen tarvittavalla tiedolla ja tuella.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+             <!-- Spacer -->
+            <div class="bg-white py-12 lg:py-16">
+                <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-brand-yellow to-transparent" />
+            </div>
+            
+            <!-- Section 3: Kuukausikirjanpito -->
+            <section class="parallax-bg py-20 lg:py-28 relative overflow-hidden" style="background-image: url('img/service2-bg.jpg');">
+                <div class="absolute inset-0 bg-black/20"></div>
+                 <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="bg-brand-yellow p-8 md:p-12 rounded-xl shadow-2xl reveal">
+                        <h2 class="text-2xl sm:text-4xl font-bold text-black mb-6 text-center" data-translate="palvelut_s3_title">Kuukausikirjanpito</h2>
+                        <div class="prose prose-lg max-w-none text-black" data-translate="palvelut_s3_text">
+                           <p>Angel Financial Services Oy:ssä tarjoamme kattavan kuukausikirjanpitopalvelun, joka varmistaa, että talousasiasi ovat ammattitaitoisissa käsissä. Tiimimme kirjaa kaikki ostosi ja myyntisi ja suorittaa selkeät ALV-laskelmat. Mutta emme pysähdy siihen – menemme pelkkiä numeroita pidemmälle. Laadimme yksityiskohtaiset tuloslaskelmat antaaksemme selkeän kuvan taloudellisesta tilanteestasi. Lisäksi palvelumme ulottuu taloudellisen tilanteesi arviointiin ja tarjoaa arvokkaita näkemyksiä sekä neuvoja liiketoimintaasi.</p>
+                           <p>Mietitkö, miten suunnitella tulevaisuutta? Me autamme sinua. Palveluihimme sisältyy myös apu tulevien toimintojen kartoittamisessa. Analysoimme kuukausittaiset tulosi ja menosi ja tarjoamme käytännön suosituksia kannattavuuden parantamiseksi ja kulujen minimoimiseksi.</p>
+                           <p>Oletko huolissasi yrityksesi taloudellisesta hyvinvoinnista? Kuukausikirjanpitopalvelumme on suunniteltu tarjoamaan sinulle tiedot ja opastuksen, joita tarvitset tietoisten päätösten tekemiseen. Anna meidän hoitaa yrityksesi numerot.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Spacer -->
+            <div class="bg-white py-12 lg:py-16">
+                <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-brand-yellow to-transparent" />
+            </div>
+
+            <!-- Section 4: Tilinpäätös -->
+            <section class="parallax-bg py-20 lg:py-28 relative overflow-hidden" style="background-image: url('img/service3-bg.jpg');">
+                <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="bg-black/70 backdrop-blur-sm p-8 md:p-12 rounded-xl shadow-2xl reveal">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 text-center" data-translate="palvelut_s4_title">Tilinpäätös ja räätälöity kirjanpito</h2>
+                        <div class="prose prose-lg max-w-none text-white" data-translate="palvelut_s4_text">
+                            <p>Yrittäjänä saatat usein joutua käymään läpi laajoja kirjanpitoaineistoja menneeltä vuodelta arvioidaksesi voittoasi tai tappiotasi. Omistautunut tiimimme yksinkertaistaa tämän prosessin puolestasi. Laadimme huolellisesti lopulliset tilinpäätösraportit, joiden avulla saat kattavan käsityksen taloudellisesta tuloksestasi.</p>
+                            <p>Mutta se ei lopu siihen. Autamme sinua myös analysoimaan näitä raportteja. Miten yrityksesi voi hyötyä yksityiskohtaisista tilinpäätöksistämme? Mitä oivalluksia voit saada analyysimme avulla? Lisäksi varmistamme, että tilinpäätösraporttisi täyttävät kaikki lakisääteiset vaatimukset. Tiimimme hoitaa paperityöt, laatien ja toimittaen kaikki tarvittavat ilmoitukset veroviranomaisille.</p>
+                            <p>Angel Financial Services Oy:n avulla selviät vaivattomasti tilinpäätösten monimutkaisuudesta ja tilikauden päättämisestä. Anna meidän olla oppaasi taloudelliseen läpinäkyvyyteen ja vaatimustenmukaisuuteen. Miten palvelumme voivat tehostaa talousraportointiasi? Miten voimme auttaa sinua tekemään tietoon perustuvia päätöksiä taloustietojesi pohjalta? Olemme täällä antaaksemme tarvitsemasi vastaukset.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Spacer -->
+            <div class="bg-white py-12 lg:py-16">
+                <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-brand-yellow to-transparent" />
+            </div>
+
+            <!-- Section 5: Konsultaatiot -->
+            <section class="parallax-bg py-20 lg:py-28 relative overflow-hidden" style="background-image: url('img/service4-bg.jpg');">
+                 <div class="absolute inset-0 bg-black/20"></div>
+                <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-xl shadow-2xl reveal">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-black mb-6 text-center" data-translate="palvelut_s5_title">Konsultaatiot ja strateginen neuvonta</h2>
+                        <div class="prose prose-lg max-w-none text-gray-800" data-translate="palvelut_s5_text">
+                             <p>Angel Financial Services Oy:n konsultointipalvelut on räätälöity antamaan yrityksellesi asiantuntevaa ohjausta ja käytännön oivalluksia. Tiimimme koostuu eri taustoista tulevista jäsenistä, joista jokainen tuo mukanaan runsaasti tietoa ja realistisen näkökulman. Tämä ainutlaatuinen kokemusten yhdistelmä antaa meille mahdollisuuden tarjoota sinulle relevanttia ohjausta ja asianmukaisia neuvoja liiketoiminnan eri osa-alueisiin Suomessa.</p>
+                            <p>Kohtaatko haasteita liiketoiminnassasi? Mietitkö, miten navigoida Suomen liike-elämän vaikeuksissa? Asiantuntijamme ovat täällä auttamassa sinua. Olipa kyse sitten lainsäädannön noudattamisesta, talousstrategioiden optimoinnista tai operatiivisten esteiden voittamisesta, tarjoamme toteuttamiskelpoisia ratkaisuja, jotka vastaavat juuri sinun yrityksesi tarpeita.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Spacer -->
+            <div class="bg-white py-12 lg:py-16">
+                <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-brand-yellow to-transparent" />
+            </div>
+            
+            <!-- Section 6: Palkanlaskenta -->
+            <section class="parallax-bg py-20 lg:py-28 relative overflow-hidden" style="background-image: url('img/service5-bg.jpg');">
+                 <div class="absolute inset-0 bg-black/20"></div>
+                 <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="bg-brand-yellow p-8 md:p-12 rounded-xl shadow-2xl reveal">
+                        <h2 class="text-2xl sm:text-4xl font-bold text-black mb-6 text-center" data-translate="palvelut_s6_title">Älykäs palkanlaskenta ja henkilöstöhallinnon ratkaisut</h2>
+                        <div class="prose prose-lg max-w-none text-black" data-translate="palvelut_s6_text">
+                           <p>Angel Oy:n palkanlaskentapalvelun tarkoituksena on varmistaa, että työntekijäsi saavat korvauksensa tarkasti ja kaikkien lakisääteisten vaatimusten mukaisesti. Asiantuntijatiimimme laskee palkat ammattitaitoisesti noudattaen Suomen työlainsäädäntöä, työehtosopimuksia ja ammattiliittojen säännöksiä. Tämä auttaa sinua paitsi täyttämään lakisääteiset velvoitteesi, myös ylläpitämään positiivisia suhteita työntekijöihisi estämällä mahdolliset juridiset ristiriidat.</p>
+                           <p>Tarkkojen palkanlaskentojen lisäksi tarjoamme tukea rekrytointiprosessissa. Tähän sisältyy apu yrityksesi työsopimusten kanssa. Kattavan palkanlaskentapalvelumme ansiosta työntekijöillesi maksetaan palkka oikein ja ajallaan. Angel Oy:n avulla voit luottaa siihen, että palkanlaskentasi on osaavissa käsissä, mikä tuo sekä taloudellista tarkkuutta että mielenrauhaa.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Spacer -->
+            <div class="bg-white py-12 lg:py-16">
+                <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-brand-yellow to-transparent" />
+            </div>
+
+            <!-- Section 7: Verosuunnittelu -->
+            <section class="parallax-bg py-20 lg:py-28 relative overflow-hidden" style="background-image: url('img/service6-bg.jpg');">
+                <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="bg-black/70 backdrop-blur-sm p-8 md:p-12 rounded-xl shadow-2xl reveal">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 text-center" data-translate="palvelut_s7_title">Verosuunnittelu ja optimointi</h2>
+                        <div class="prose prose-lg max-w-none text-white" data-translate="palvelut_s7_text">
+                            <p>Angel Oy:n arvonlisäverolaskelmat ja ALV-raportit -palvelu on suunniteltu hoitamaan yksi yritysten taloushallinnon kriittisimmistä osa-alueista. Ymmärrämme, että ALV:n laskeminen ja tarkkojen ALV-raporttien laatiminen voi olla monimutkainen ja aikaa vievä tehtävä. Tässä kohtaa astumme kuvaan.</p>
+                            <p>Omistautunut ammattilaistiimimme poistaa ALV-laskelmien vaivan seuraamalla kaikkia ostojasi ja myyntejäsi. Takaamme, että ALV-velvoitteesi täytetään Suomen verosäännösten mukaisesti, jotta voit keskittyä ydinliiketoimintaasi murehtimatta vaatimustenmukaisuudesta.ALV-palvelumme on suunniteltu virtaviivaistamaan talousprosessejasi, minimoimaan virheriskejä ja varmistamaan veroviranomaisten vaatimusten noudattamisen. Angel Oy:n avulla voit luottaa siihen, että ALV-laskelmasi ja -raporttisi ovat tarkkoja ja ajantasaisia, mikä tuo sinulle taloudellista selkeyttä ja luottamusta taloushallintoosi.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: CTA -->
+             <section class="bg-white py-20 overflow-hidden">
+                <div class="text-center">
+                    <button onclick="Navigation.showPage('yhteystiedot')" class="bg-brand-yellow text-white font-bold py-4 px-10 rounded-lg text-xl hover:bg-black transition-all duration-300 transform hover:scale-105" data-translate="contact_button_3">Ota yhteyttä</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- MEISTÄ PAGE -->
+        <main data-page-id="meista" class="page hidden bg-brand-gray">
+            
+            <!-- Section 1: Intro -->
+            <section class="py-20 lg:py-28 overflow-hidden">
+                <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="bg-white p-10 rounded-lg shadow-md reveal-slide-left">
+                            <h1 class="text-4xl lg:text-5xl font-bold text-black mb-6" data-translate="meista_s1_title">Meistä</h1>
+                            <div class="prose prose-lg max-w-none text-gray-700" data-translate="meista_s1_text">
+                                <p>Angel Financial Services Oy:n toiminnan keskiössä on pienten ja keskisuurten yritysten tukeminen ja kehittäminen taloushallinnon ja veroraportoinnin osa-alueilla. Menestyksen määrittävät ensisijaisesti numerot, ja syvällinen ymmärryksemme niistä ja kirjanpidosta antaa meille mahdollisuuden tarjota käytännönläheisiä ratkaisuja yritysten omistajille, jotka etsivät apua yrityksensä johtamiseen sekä kannattavuuden ja kasvun.</p>
+                                <p>Ydinpalveluihimme kuuluu kirjanpito- ja yritysosaamisemme hyödyntäminen seuraavissa palveluissa: päivittäiset kirjanpitopalvelut, veroviranomaisraporttien laatiminen, arvonlisäveron ja palkkojen laskeminen sekä talousraporttien toimittaminen viranomaisille ja yrittäjille.</p>
+                            </div>
+                        </div>
+                        <div class="relative reveal-slide-right flex justify-center">
+                            <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+                                <div class="absolute top-7 right-7 w-20 h-20 bg-brand-yellow rounded-tl-3xl rounded-br-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+                                <img src="img/meista_circle-min.jpg" alt="Toimisto" class="relative rounded-full w-full h-full object-cover shadow-2xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Spacer -->
+            <div class="py-8">
+                <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+            </div>
+
+            <!-- Section 2: Our Approach -->
+            <section class="py-20 lg:py-28 bg-white overflow-hidden">
+                <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 reveal text-left">
+                    <h2 class="text-3xl lg:text-5xl font-bold text-black" data-translate="meista_s2_title">Toimintatapamme</h2>
+                    <p class="text-xl italic text-gray-600 mt-4" data-translate="meista_s2_subtitle">Yhteistyöllä kohta menestystä</p>
+                    <p class="text-lg text-gray-700 mt-6 max-w-4xl" data-translate="meista_s2_text">Angel-tiimi tarjoaa täyden tuen taloushallinnon ja verotuksen osa-alueilla, jotta voitte keskittää arvokkaan aikanne ydinliiketoimintanne kehittämiseen. Voitte keskittyä liiketoimintatavoitteidenne saavuttamiseen, kun me hoidamme taloudelliset tehtävät.</p>
+                </div>
+            </section>
+            
+            <!-- Section 3: Digital Services -->
+            <section class="py-20 lg:py-28 bg-white border-t border-gray-100 overflow-hidden">
+                <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left reveal">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-black" data-translate="meista_s3_title">Vaivatonta asiointia</h2>
+                    <p class="text-xl italic text-gray-600 mt-4" data-translate="meista_s3_subtitle">Palvelut juuri sinulle sopivasti</p>
+                    <p class="text-lg text-gray-700 mt-6 max-w-4xl" data-translate="meista_s3_text">Kaikki palvelumme ovat saatavilla myös digitaalisesti, mikä mahdollistaa helpon yhteydenpidon ja asioiden seurannan mukavasti kotoanne käsin, säästäen teidät ylimääräiseltä vaivalta. Tarvittaessa järjestämme kanssanne myös henkilökohtaisia tapaamisia.</p>
+                </div>
+            </section>
+            
+            <!-- Section 4: CTA Banner -->
+            <section class="bg-brand-yellow py-16">
+                <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-white rounded-lg shadow-xl p-8">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                     <svg class="w-8 h-8 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-black" data-translate="meista_s4_title">Tarvitsetko apua? Ota yhteyttä!</h3>
+                                    <div class="flex">
+                                        <p class="text-gray-500 mt-1" data-translate="meista_soita">Soita meille: </p>
+                                        <a href="tel:+358401291041" class="font-semibold text-gray-500 mt-1 hover:text-brand-yellow transition-colors" aria-label="Soita meille"> +358 40 129 1041</a>
+                                    </div>
+                                    <!--<a href="tel:+358401291041" class="font-semibold text-brand-dark hover:text-brand-yellow transition-colors" aria-label="Soita meille">+358 40 129 1041</a>--><p class="text-gray-500 mt-1" data-translate="meista_s4_text">​tai ota yhteyttä alhalla olevan lomakkeen kautta.</p>
+                                </div>
+                            </div>
+                             <button onclick="Navigation.showPage('yhteystiedot')" class="bg-brand-yellow text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-black hover:text-white transition-all duration-300 w-full md:w-auto flex-shrink-0" data-translate="meista_s4_button">VARAA AIKAA</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Section 5: Contact Form -->
+<section class="bg-white py-20 lg:py-28">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal-slide-left">
+                <h2 class="text-4xl lg:text-5xl font-bold text-black leading-tight" data-translate="meista_s5_title">Keskity menestykseen – me hoidamme numerot.</h2>
+                <h3 class="text-2xl text-gray-700 mt-4" data-translate="meista_s5_subtitle">Ota yhteyttä, niin autamme sinua jo tänään!</h3>
+                
+                <form action="send-email-db.php" method="POST" class="mt-8 space-y-4">
+                    <!-- Honeypot for spam protection (hidden) -->
+                    <input type="text" name="website" class="absolute left-[-9999px] w-[1px] h-[1px]" tabindex="-1" autocomplete="off">
+                    
+                    <!-- Split name into firstName and lastName for database -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input 
+                            type="text" 
+                            name="firstName" 
+                            data-translate-placeholder="meista_s5_firstname_placeholder" 
+                            placeholder="Etunimi *" 
+                            required
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:ring-brand-yellow focus:border-brand-yellow"
+                        >
+                        <input 
+                            type="text" 
+                            name="lastName" 
+                            data-translate-placeholder="meista_s5_lastname_placeholder" 
+                            placeholder="Sukunimi *" 
+                            required
+                            class="w-full p-4 border border-gray-300 rounded-lg focus:ring-brand-yellow focus:border-brand-yellow"
+                        >
+                    </div>
+                    
+                    <input 
+                        type="email" 
+                        name="email" 
+                        data-translate-placeholder="meista_s5_email_placeholder" 
+                        placeholder="Sähköpostiosoitteesi *" 
+                        required
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-brand-yellow focus:border-brand-yellow"
+                    >
+                    
+                    <!-- Hidden message field with default value (required by database) -->
+                    <input type="hidden" name="message" value="Kiinnostus palveluistanne - Meista-sivulta">
+                    
+                    <button 
+                        type="submit" 
+                        class="bg-brand-yellow text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-black transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed" 
+                        data-translate="meista_s5_button"
+                    >
+                        Lähetä
+                    </button>
+                </form>
+            </div>
+            
+            <div class="flex items-center justify-center reveal-slide-right">
+                <p class="text-xl text-gray-500 max-w-md text-center lg:text-left" data-translate="meista_s5_text_right">Olemme luotettava talouskumppanisi. Autamme yritystäsi saavuttamaan kannattavuuden, kasvun ja pitkäaikaisen menestyksen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <!-- TIIMI PAGE -->
+        <main data-page-id="tiimi" class="page hidden">
+            <!-- Section 1: Hero -->
+            <section class="relative bg-cover bg-center py-40" style="background-image: url('img/tiimi-hero.jpg');">
+                <div class="absolute inset-0 bg-black opacity-55"></div>
+                <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white reveal">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold" data-translate="tiimi_s1_title">Monikulttuurinen ja rikas mosaiikki</h1>
+                    <p class="mt-6 text-xl lg:text-2xl max-w-3xl mx-auto" data-translate="tiimi_s1_subtitle">Angel-tiimin voima on sen ihmisissä: kokeneissa kirjanpitäjissä, yrittäjissä ja strategisissa neuvonantajissa. Meitä yhdistää yksi tavoite: tukea yrityksesi menestystä.</p>
+                    <div class="mt-10 flex flex-wrap justify-center gap-4">
+                        <button onclick="Navigation.showPage('palvelut')" class="bg-brand-yellow text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-black transition-all duration-300" data-translate="tiimi_s1_button1">Palvelut</button>
+                        <button onclick="Navigation.showPage('yhteystiedot')" class="bg-brand-yellow text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-black transition-all duration-300" data-translate="tiimi_s1_button2">Ota Yhteyttä</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spacer -->
+            <div class="py-8 bg-white">
+                 <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+            </div>
+
+            <!-- Section 2: Team Grid -->
+             <section class="relative bg-cover bg-center py-20 lg:py-28" style="background-image: url('img/tiimi-bg.jpg');">
+                 <div class="absolute inset-0 bg-brand-yellow opacity-55"></div>
+                 <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 reveal">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12" data-translate="tiimi_s2_title">Team Angel</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12" id="team-grid">
+                            <!-- Team members will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 3: CTA -->
+            <section class="bg-white py-20">
+                <div class="text-center">
+                    <button onclick="Navigation.showPage('yhteystiedot')" class="bg-brand-yellow text-white font-bold py-4 px-10 rounded-lg text-xl hover:bg-black transition-all duration-300 transform hover:scale-105" data-translate="contact_button_3">Ota yhteyttä</button>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- YHTEYSTIEDOT PAGE -->
+        <main data-page-id="yhteystiedot" class="page hidden">
+             <!-- Section 1: Contact Info & Form -->
+            <section class="relative bg-cover bg-center py-20 lg:py-32" style="background-image: url('img/contact-bg.jpg');">
+                <div class="absolute inset-0 bg-black opacity-65"></div>
+                <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <!-- Left Column: Contact Details -->
+                        <div class="reveal-slide-left">
+                            <h1 class="text-4xl lg:text-5xl font-bold mb-8" data-translate="contact_s1_title">Yhteystiedot</h1>
+                            <div class="space-y-6">
+                                <!-- Phone -->
+                                <div class="flex items-start gap-4">
+                                    <svg class="w-6 h-6 text-brand-yellow mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    <div>
+                                        <h3 class="text-3xl font-bold" data-translate="contact_s1_phone_title">Puhelinnumero</h3>
+                                        <a href="tel:+358401291041" class="text-lg text-white/80 hover:text-brand-yellow transition-colors" data-translate="contact_s1_phone_number">+358 40 129 1041</a>
+                                    </div>
+                                </div>
+                                <!-- Address -->
+                                <div class="flex items-start gap-4">
+                                    <svg class="w-6 h-6 text-brand-yellow mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    <div>
+                                        <h3 class="text-3xl font-bold" data-translate="contact_s1_address_title">Osoite</h3>
+                                        <p class="text-lg text-white/80" data-translate="contact_s1_address_text">Ruosilantie 1 A 00390, Helsinki Finland</p>
+                                    </div>
+                                </div>
+                                <!-- Opening Hours -->
+                                <div class="flex items-start gap-4">
+                                     <svg class="w-6 h-6 text-brand-yellow mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <div>
+                                        <h3 class="text-3xl font-bold" data-translate="contact_s1_hours_title">Aukioloajat</h3>
+                                        <p class="text-lg text-white/80" data-translate="contact_s1_hours_mon_thu">Maanantai - Torstai 10-16</p>
+                                        <p class="text-lg text-white/80" data-translate="contact_s1_hours_fri">Perjantai verkossa 10-16</p>
+                                        <p class="text-lg text-white/80" data-translate="contact_s1_hours_sat_sun">Lauantai - Sunnuntai SULJETTU</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Column: Contact Form -->
+                        <div class="bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-lg reveal-slide-right">
+                            <form action="send-email-db.php" method="POST" class="space-y-4">
+                                <!-- Honeypot for spam protection (hidden) -->
+                                <input type="text" name="website" class="absolute left-[-9999px] w-[1px] h-[1px]" tabindex="-1" autocomplete="off">
+        
+                                <!-- Name Fields (split into first and last) -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <input 
+                                        type="text" 
+                                        name="firstName" 
+                                        data-translate-placeholder="contact_s1_form_firstname_placeholder" 
+                                        placeholder="Etunimi *" 
+                                        required
+                                        class="w-full p-4 border border-gray-600 rounded-lg bg-transparent text-black placeholder-black/70 focus:ring-brand-yellow focus:border-brand-yellow"
+                                    >
+                                    <input 
+                                        type="text" 
+                                        name="lastName" 
+                                        data-translate-placeholder="contact_s1_form_lastname_placeholder" 
+                                        placeholder="Sukunimi *" 
+                                        required
+                                        class="w-full p-4 border border-gray-600 rounded-lg bg-transparent text-black placeholder-black/70 focus:ring-brand-yellow focus:border-brand-yellow"
+                                    >
+                                </div>
+        
+                                <!-- Email and Phone -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <input 
+                                        type="email" 
+                                        name="email" 
+                                        data-translate-placeholder="contact_s1_form_email_placeholder" 
+                                        placeholder="Sähköposti *" 
+                                        required
+                                        class="w-full p-4 border border-gray-600 rounded-lg bg-transparent text-black placeholder-black/70 focus:ring-brand-yellow focus:border-brand-yellow"
+                                    >
+                                    <input 
+                                        type="tel" 
+                                        name="phone" 
+                                        data-translate-placeholder="contact_s1_form_phone_placeholder" 
+                                        placeholder="Puhelinnumero" 
+                                        class="w-full p-4 border border-gray-600 rounded-lg bg-transparent text-black placeholder-black/70 focus:ring-brand-yellow focus:border-brand-yellow"
+                                    >
+                                </div>
+        
+                                <!-- Company -->
+                                <input 
+                                    type="text" 
+                                    name="company" 
+                                    data-translate-placeholder="contact_s1_form_company_placeholder" 
+                                    placeholder="Yrityksen nimi" 
+                                    class="w-full p-4 border border-gray-600 rounded-lg bg-transparent text-black placeholder-black/70 focus:ring-brand-yellow focus:border-brand-yellow"
+                                >
+        
+                                <!-- Service Selection -->
+                                <select 
+                                    name="service" 
+                                    data-translate-placeholder="contact_s1_form_service_placeholder"
+                                    class="w-full p-4 border border-gray-600 rounded-lg bg-transparent text-black focus:ring-brand-yellow focus:border-brand-yellow"
+                                >
+                                    <option value="" data-translate="contact_s1_form_service_default">Palvelu, josta olet kiinnostunut</option>
+                                    <option value="kirjanpito" data-translate="contact_s1_form_service_accounting">Kuukausikirjanpito</option>
+                                    <option value="palkanlaskenta" data-translate="contact_s1_form_service_payroll">Palkanlaskenta</option>
+                                    <option value="yritysrekisterointi" data-translate="contact_s1_form_service_registration">Yritysrekisteröinti</option>
+                                    <option value="tilinpaatos" data-translate="contact_s1_form_service_financial">Tilinpäätös</option>
+                                    <option value="verosuunnittelu" data-translate="contact_s1_form_service_tax">Verosuunnittelu</option>
+                                    <option value="konsultointi" data-translate="contact_s1_form_service_consulting">Konsultointi</option>
+                                    <option value="muu" data-translate="contact_s1_form_service_other">Muu palvelu</option>
+                                </select>
+        
+                                <!-- Message -->
+                                <textarea 
+                                    name="message" 
+                                    data-translate-placeholder="contact_s1_form_message_placeholder" 
+                                    placeholder="Viestisi *" 
+                                    rows="5" 
+                                    required
+                                    class="w-full p-4 border border-gray-600 rounded-lg bg-transparent text-black placeholder-black/70 focus:ring-brand-yellow focus:border-brand-yellow resize-y"
+                                ></textarea>
+        
+                                <!-- Submit Button -->
+                                <button 
+                                    type="submit" 
+                                    class="bg-brand-yellow text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-black hover:text-white transition-all duration-300 w-full disabled:opacity-60 disabled:cursor-not-allowed" 
+                                    data-translate="contact_s1_form_button"
+                                    >
+                                    Lähetä
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Spacer -->
+            <div class="py-8 bg-white">
+                 <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+            </div>
+
+            <!-- Section 2: Google Maps Embed -->
+            <section class="w-full h-[60vh]">
+                 <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.0163434190864!2d24.819321677028137!3d60.2281896749658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920f3a67733475%3A0x6a2e411b427a1f52!2sRuosilantie%201%2C%2000390%20Helsinki!5e0!3m2!1sen!2sfi!4v1678886543210!5m2!1sen!2sfi" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+            
+             <!-- Spacer -->
+            <div class="py-8 bg-white">
+                 <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+            </div>
+            
+            <section class="bg-white py-20">
+    <div id="UKK" class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Usein Kysytyt Kysymykset</h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+            <details class="border-b pb-4">
+                <summary class="font-bold text-lg cursor-pointer">Paljonko kirjanpito maksaa?</summary>
+                <p class="mt-2 text-gray-700">Kirjanpidon hinta riippuu yrityksen koosta ja tapahtumien määrästä. Ota yhteyttä, niin teemme sinulle tarjouksen!</p>
+            </details>
+            <details class="border-b pb-4">
+                <summary class="font-bold text-lg cursor-pointer">Paljonko yrityksen perustaminen maksaa?</summary>
+                <p class="mt-2 text-gray-700">Autamme yrityksen perustamisessa ja rekisteröinnissä. Hinta riippuu yhtiömuodosta. Ota yhteyttä!</p>
+            </details>
+            <details class="border-b pb-4">
+                <summary class="font-bold text-lg cursor-pointer">Missä toimitte?</summary>
+                <p class="mt-2 text-gray-700">Toimistomme sijaitsee Helsingissä osoitteessa Ruosilantie 1 A. Palvelemme kuitenkin asiakkaita koko Suomessa etänä.</p>
+            </details>
+            <details class="border-b pb-4">
+                <summary class="font-bold text-lg cursor-pointer">Millä kielillä palvelette?</summary>
+                <p class="mt-2 text-gray-700">Palvelemme suomeksi, englanniksi, viroksi, hindiksi ja arabiaksi.</p>
+            </details>
+        </div>
+    </div>
+</section>
+<div class="py-8 bg-white">
+                 <hr class="w-2/3 lg:w-1/2 mx-auto border-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+            </div>
+        </main>
+    </div>
+
+    <!-- TEAM MEMBER MODAL -->
+    <div id="team-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+        <div id="team-modal-content" class="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden">
+            <img id="modal-img" src="" alt="" class="w-full md:w-1/3 h-64 md:h-auto object-cover">
+            <div class="p-8 flex-1 flex flex-col overflow-y-auto">
+                <div class="flex-1">
+                    <h3 id="modal-name" class="text-3xl font-bold text-black"></h3>
+                    <p id="modal-title" class="text-brand-yellow text-lg font-semibold mt-1"></p>
+                    <div id="modal-desc" class="prose mt-4 text-gray-600"></div>
+                </div>
+                <button id="modal-close-button" class="mt-6 self-start bg-gray-200 text-gray-800 font-bold py-2 px-6 rounded-lg hover:bg-gray-300 transition-colors" data-translate="close_button">Sulje</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark bg-cover bg-center text-white relative" style="background-image: linear-gradient(rgba(51,51,51,0.9), rgba(51,51,51,0.9)), url('img/footer-min.jpg');">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <p class="text-white/80" data-translate="footer_slogan">Taloudelliset suojelusenkelisi.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-8 md:space-y-0">
+                <div class="flex items-center space-x-7">
+                    <img src="img/FooterLogo.png" alt="Angel Financial Services Footer Logo" class="h-14 w-auto">
+                    <div class="gap-x-4">
+                        <a href="/privacy-policy.html" class="hover:text-brand-yellow" data-translate="privacy_policy">Tietosuojaseloste</a>
+                        <a href="/terms-of-service.html" class="hover:text-brand-yellow" data-translate="termsofservice">Käyttöehdot</a>
+                        <a href="#yhteystiedot" onclick="Navigation.showPage('yhteystiedot')" class="hover:text-brand-yellow" data-translate="faq">UKK</a>
+                    </div>
+                </div>
+                <div class="text-white/80">
+                    <p>info@angeloy.fi</p>
+                    <p>Ruosilantie 1 A 00390, Helsinki Finland</p>
+                    <p>Y-tunnus: 3330389-2</p>
+                    <a href="tel:+358401291041" alt="Footer phone number link" class="hover:text-brand-yellow">+358 40 129 1041</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center text-center">
+                <p class="text-white/60" data-translate="footer_copyright">2025 © Angel Financial Services Oy. Kaikki oikeudet pidätetään.</p>
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <a href="https://www.linkedin.com/company/angel-financial-services-oy/" target="_blank" rel="noopener noreferrer" class="opacity-70 hover:opacity-100 transition-opacity" aria-label="LinkedIn">
+                       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="24" cy="24" r="24" fill="#F1C50E"/>
+                            <rect x="15" y="16" width="3" height="15" fill="#FFFFFF"/>
+                            <path d="M21 21C21 18.2386 23.2386 16 26 16H31C33.7614 16 36 18.2386 36 21V31H32V21C32 19.3431 30.6569 18 29 18H28C26.3431 18 25 19.3431 25 21V31H21V21Z" fill="#FFFFFF"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100089574093324" target="_blank" rel="noopener noreferrer" class="opacity-70 hover:opacity-100 transition-opacity" aria-label="Facebook">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="24" cy="24" r="24" fill="#F1C50E"/>
+                            <path d="M28.5 24H32.5L33 19H28.5V16C28.5 14.8954 29.3954 14 30.5 14H33V10C32.0673 9.87851 31.1118 9.89709 30 10C26.3243 10 24.5 12.1818 24.5 15.5V19H21V24H24.5V38H28.5V24Z" fill="#FFFFFF"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/angel.financials/" target="_blank" rel="noopener noreferrer" class="opacity-70 hover:opacity-100 transition-opacity" aria-label="Instagram">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="24" cy="24" r="24" fill="#F1C50E"/>
+                            <rect x="11" y="11" width="26" height="26" rx="7" stroke="#FFFFFF" stroke-width="3"/>
+                            <circle cx="24" cy="24" r="5" stroke="#FFFFFF" stroke-width="3"/>
+                            <circle cx="30" cy="18" r="1.5" fill="#FFFFFF"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
