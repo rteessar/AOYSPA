@@ -1,0 +1,14 @@
+# Ignoreeri konfiguratsioonifaile
+config.php
+database.php
+.env
+
+# Ignoreeri süsteemifaile
+.DS_Store
+Thumbs.db
+
+# Ignoreeri kaustu (vajadusel)
+node_modules/
+vendor/
+/.vs/backup.slnx/FileContentIndex/2f39c19d-cf21-450e-8184-684d646abb2c.vsidx
+/.vs
