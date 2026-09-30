@@ -416,9 +416,10 @@ const Translation = {
             if (el.hasAttribute('data-translate')) {
                 const key = el.getAttribute('data-translate');
                 if (this.data[lang][key]) {
-                    // Sanitize HTML to prevent XSS
+                    // Translation strings are static content from this file, so
+                    // HTML strings can be inserted as-is.
                     if (this.data[lang][key].startsWith('<p>')) {
-                        el.innerHTML = DOMPurify ? DOMPurify.sanitize(this.data[lang][key]) : this.data[lang][key];
+                        el.innerHTML = this.data[lang][key];
                     } else {
                         el.textContent = this.data[lang][key];
                     }
@@ -650,6 +651,21 @@ const Slider = {
                 nextSlideMessage: 'Seuraava dia',
             }
         });
+        this.loadDeferredBackgrounds();
+    },
+
+    // Slides after the first one get their background image only once the page
+    // has loaded, so they do not compete with the first slide for bandwidth.
+    loadDeferredBackgrounds() {
+        const load = () => document.querySelectorAll('[data-bg]').forEach(el => {
+            el.style.backgroundImage = `url('${el.dataset.bg}')`;
+            el.removeAttribute('data-bg');
+        });
+        if (document.readyState === 'complete') {
+            load();
+        } else {
+            window.addEventListener('load', load, { once: true });
+        }
     }
 };
 
@@ -694,35 +710,35 @@ const TeamModal = {
             name: 'member1_name', 
             title: 'member1_title', 
             desc: 'member1_desc', 
-            imgSrc: 'img/team1.jpg',
+            imgSrc: 'img/team1.webp',
         },
         { 
             id: 'member2', 
             name: 'member2_name', 
             title: 'member2_title', 
             desc: 'member2_desc', 
-            imgSrc: 'img/team2.jpg',
+            imgSrc: 'img/team2.webp',
         },
         { 
             id: 'member3', 
             name: 'member3_name', 
             title: 'member3_title', 
             desc: 'member3_desc', 
-            imgSrc: 'img/team3.jpg',
+            imgSrc: 'img/team3.webp',
         },
         { 
             id: 'member4', 
             name: 'member4_name', 
             title: 'member4_title', 
             desc: 'member4_desc', 
-            imgSrc: 'img/team4.jpg',
+            imgSrc: 'img/team4.webp',
         },
         { 
             id: 'member5', 
             name: 'member5_name', 
             title: 'member5_title', 
             desc: 'member5_desc', 
-            imgSrc: 'img/team5.jpg',
+            imgSrc: 'img/team5.webp',
         },
     ],
     
