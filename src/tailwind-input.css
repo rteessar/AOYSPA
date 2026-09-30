@@ -1,0 +1,5 @@
+/* Source for the generated ../tailwind.css – run `npm run build:css` after
+   adding or changing Tailwind classes in index.html or script.js. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
