@@ -170,6 +170,18 @@ const Translation = {
         faq_q4: "Millä kielillä palvelette?",
         faq_a4: "Palvelemme suomeksi, englanniksi, viroksi, hindiksi ja arabiaksi.",
 
+        // Cookie banner and map
+        cookie_title: "Evästeet",
+        cookie_text: "Käytämme sivuston toimintaan vain välttämättömiä tekniikoita. Jos hyväksyt, käytämme lisäksi Google Analyticsia kävijätilastointiin ja näytämme Google Mapsin kartan. Voit muuttaa valintaasi milloin tahansa sivun alaosan Evästeasetukset-linkistä.",
+        cookie_more: "Lue lisää tietosuojaselosteesta",
+        cookie_accept: "Hyväksy kaikki",
+        cookie_reject: "Vain välttämättömät",
+        cookie_settings: "Evästeasetukset",
+        map_title: "Kartta: Ruosilantie 1 A, 00390 Helsinki",
+        map_notice: "Kartta näytetään Google Mapsista. Kartan lataaminen välittää tietoja Googlelle.",
+        map_load: "Näytä kartta",
+        map_open: "Avaa Google Mapsissa",
+
         // Shared UI
         skip_link: "Siirry sisältöön",
         logo_home: "Angel Financial Services - Etusivu",
@@ -335,6 +347,18 @@ const Translation = {
         faq_a3: "Our office is at Ruosilantie 1 A in Helsinki, but we serve clients remotely all over Finland.",
         faq_q4: "Which languages do you work in?",
         faq_a4: "We serve clients in Finnish, English, Estonian, Hindi and Arabic.",
+
+        // Cookie banner and map
+        cookie_title: "Cookies",
+        cookie_text: "We only use technology that the site needs to work. If you accept, we also use Google Analytics for visitor statistics and show a Google Maps map. You can change your choice at any time from the Cookie settings link at the bottom of the page.",
+        cookie_more: "Read more in our privacy policy (in Finnish)",
+        cookie_accept: "Accept all",
+        cookie_reject: "Necessary only",
+        cookie_settings: "Cookie settings",
+        map_title: "Map: Ruosilantie 1 A, 00390 Helsinki",
+        map_notice: "The map is shown from Google Maps. Loading it sends data to Google.",
+        map_load: "Show map",
+        map_open: "Open in Google Maps",
 
         // Shared UI
         skip_link: "Skip to content",
@@ -1167,6 +1191,124 @@ const Seo = {
     }
 };
 
+// === COOKIE CONSENT MODULE ===
+// Google Analytics and the Google Maps map are only loaded after the visitor
+// accepts them in the cookie banner (Finnish law requires consent before
+// non-essential cookies). The choice is stored in this browser and can be
+// changed from the "Evästeasetukset" link in the footer.
+const Consent = {
+    storageKey: 'cookie_consent_v1',
+    analyticsId: 'G-KKFD5FNL62',
+    analyticsLoaded: false,
+    banner: null,
+
+    init() {
+        this.banner = document.getElementById('cookie-banner');
+
+        // Google Consent Mode v2: everything is denied until the visitor agrees.
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied'
+        });
+
+        document.addEventListener('click', (e) => {
+            const target = e.target.closest('[data-consent], [data-cookie-settings], [data-load-map]');
+            if (!target) return;
+
+            if (target.dataset.consent) {
+                this.choose(target.dataset.consent);
+            } else if (target.hasAttribute('data-cookie-settings')) {
+                this.showBanner(true);
+            } else {
+                this.loadMap();
+            }
+        });
+
+        const choice = this.getChoice();
+        if (choice === 'granted') {
+            this.enable();
+        } else if (choice !== 'denied') {
+            this.showBanner(false);
+        }
+    },
+
+    getChoice() {
+        try {
+            return localStorage.getItem(this.storageKey);
+        } catch (e) {
+            return null;
+        }
+    },
+
+    choose(choice) {
+        try {
+            localStorage.setItem(this.storageKey, choice);
+        } catch (e) {
+            console.warn('localStorage not available');
+        }
+        this.banner.hidden = true;
+
+        if (choice === 'granted') {
+            this.enable();
+        } else {
+            this.disableAnalytics();
+        }
+    },
+
+    showBanner(moveFocus) {
+        this.banner.hidden = false;
+        if (moveFocus) this.banner.querySelector('button').focus();
+    },
+
+    enable() {
+        this.loadAnalytics();
+        this.loadMap();
+    },
+
+    loadAnalytics() {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        if (this.analyticsLoaded) return;
+
+        this.analyticsLoaded = true;
+        gtag('js', new Date());
+        gtag('config', this.analyticsId);
+
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${this.analyticsId}`;
+        document.head.appendChild(script);
+    },
+
+    // Consent withdrawn: stop Analytics and delete the cookies it has set.
+    disableAnalytics() {
+        gtag('consent', 'update', { analytics_storage: 'denied' });
+
+        const domain = window.location.hostname.replace(/^www\./, '');
+        document.cookie.split(';')
+            .map(cookie => cookie.split('=')[0].trim())
+            .filter(name => name.startsWith('_ga'))
+            .forEach(name => {
+                document.cookie = `${name}=; Max-Age=0; path=/`;
+                document.cookie = `${name}=; Max-Age=0; path=/; domain=.${domain}`;
+            });
+    },
+
+    loadMap() {
+        const container = document.getElementById('map');
+        const template = document.getElementById('map-template');
+        if (!container || !template || container.querySelector('iframe')) return;
+
+        const iframe = template.content.querySelector('iframe').cloneNode(true);
+        iframe.title = Translation.t('map_title');
+        container.appendChild(iframe);
+        container.querySelector('.map-placeholder')?.remove();
+    }
+};
+
 // === IMAGE ERROR HANDLING ===
 // Error events do not bubble, so listen in the capture phase; this also
 // covers images added later (team cards, the profile popup).
@@ -1187,7 +1329,7 @@ const ImageHandler = {
 // Each module starts on its own, so one failing module (for example the
 // slider) does not leave the rest of the page without its features.
 document.addEventListener('DOMContentLoaded', function() {
-    const modules = { ImageHandler, Translation, Navigation, Seo, MobileMenu, Parallax, Slider, ScrollAnimations, TeamModal, FormHandler };
+    const modules = { ImageHandler, Translation, Navigation, Seo, Consent, MobileMenu, Parallax, Slider, ScrollAnimations, TeamModal, FormHandler };
 
     Object.entries(modules).forEach(([name, module]) => {
         try {
