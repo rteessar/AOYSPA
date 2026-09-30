@@ -9,6 +9,9 @@ module.exports = {
         'brand-gray': '#f4f4f4',
         'brand-dark': '#333333',
         'brand-yellow': '#f1c50e',
+        // Dark gold for small text on light backgrounds (the yellow itself is
+        // too light to read as text: 1.7:1 contrast on white)
+        'brand-gold': '#7a6200',
       },
     },
   },

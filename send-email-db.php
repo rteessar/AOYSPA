@@ -79,6 +79,8 @@ try {
     $phone = singleLine(sanitize($_POST['phone'] ?? ''));
     $company = singleLine(sanitize($_POST['company'] ?? ''));
     $service = singleLine(sanitize($_POST['service'] ?? ''));
+    // Language the visitor wants to be served in (fi, en, et, hi, ar)
+    $preferredLanguage = singleLine(sanitize($_POST['language'] ?? $lang));
     $message = sanitize($_POST['message'] ?? '');
     
     $errors = [];
@@ -163,7 +165,7 @@ try {
     // Send email notification
     $emailSent = sendNotificationEmail(
         $db, $submissionId, $firstName, $lastName, $email,
-        $phone, $company, $service, $message, $priority, $ip, $lang
+        $phone, $company, $service, $message, $priority, $ip, $preferredLanguage
     );
     
     if (!$emailSent) {
@@ -298,7 +300,16 @@ function containsSpam($text) {
     return false;
 }
 
-function sendNotificationEmail($db, $submissionId, $firstName, $lastName, $email, $phone, $company, $service, $message, $priority, $ip, $lang) {
+function sendNotificationEmail($db, $submissionId, $firstName, $lastName, $email, $phone, $company, $service, $message, $priority, $ip, $preferredLanguage) {
+    $languageNames = [
+        'fi' => 'suomi',
+        'en' => 'englanti',
+        'et' => 'viro',
+        'hi' => 'hindi',
+        'ar' => 'arabia'
+    ];
+    $selectedLanguage = $languageNames[$preferredLanguage] ?? 'suomi';
+
     $serviceNames = [
         'kirjanpito' => 'Kuukausikirjanpito',
         'palkanlaskenta' => 'Palkanlaskenta',
@@ -312,7 +323,8 @@ function sendNotificationEmail($db, $submissionId, $firstName, $lastName, $email
     $selectedService = $serviceNames[$service] ?? 'Ei valittu';
     $priorityBadge = $priority === 'high' ? '🔴 KIIREELLINEN' : ($priority === 'urgent' ? '🔴 ERITTÄIN KIIREELLINEN' : '');
     
-    $subject = '[Yhteydenotto' . ($priorityBadge ? ' - KIIREELLINEN' : '') . '] ' . $firstName . ' ' . $lastName;
+    $subject = '[Yhteydenotto' . ($priorityBadge ? ' - KIIREELLINEN' : '') . '] ' . $firstName . ' ' . $lastName
+        . ($preferredLanguage !== 'fi' && isset($languageNames[$preferredLanguage]) ? ' (' . $languageNames[$preferredLanguage] . ')' : '');
     
     $body = '<!DOCTYPE html><html><head><style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
@@ -339,7 +351,7 @@ function sendNotificationEmail($db, $submissionId, $firstName, $lastName, $email
                 ' . (!empty($phone) ? '<div class="field"><div class="label">Puhelinnumero:</div><div><a href="tel:' . htmlspecialchars($phone) . '">' . htmlspecialchars($phone) . '</a></div></div>' : '') . '
                 ' . (!empty($company) ? '<div class="field"><div class="label">Yritys:</div><div>' . htmlspecialchars($company) . '</div></div>' : '') . '
                 <div class="field"><div class="label">Kiinnostunut palvelu:</div><div>' . htmlspecialchars($selectedService) . '</div></div>
-                <div class="field"><div class="label">Asiointikieli:</div><div>' . ($lang === 'en' ? 'englanti (vastaa englanniksi)' : 'suomi') . '</div></div>
+                <div class="field"><div class="label">Toivottu asiointikieli:</div><div>' . htmlspecialchars($selectedLanguage) . '</div></div>
                 <div class="field"><div class="label">Prioriteetti:</div><div>' . ucfirst($priority) . '</div></div>
                 <div class="message-box"><div class="label">Viesti:</div><div>' . nl2br(htmlspecialchars($message)) . '</div></div>
                 <div style="text-align: center; margin-top: 30px;">

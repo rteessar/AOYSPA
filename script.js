@@ -2,14 +2,6 @@
    ANGEL FINANCIAL SERVICES - JAVASCRIPT
    ======================================== */
 
-// === CONSTANTS ===
-const SWIPER_CONFIG = {
-    LOOP: false,
-    EFFECT: 'fade',
-    SPEED: 1000,
-    AUTOPLAY_DELAY: 5000
-};
-
 // === TRANSLATION MODULE ===
 const Translation = {
     currentLang: 'fi',
@@ -25,35 +17,17 @@ const Translation = {
         nav_meista: "Meistä",
         nav_tiimi: "Tiimi",
         nav_yhteystiedot: "Yhteystiedot",
-        hero1_title: "Ensilento rajattomiin korkeuksiin, taloudelliset suojelusenkelisi.",
-        hero1_subtitle: "Opastamme yrityksesi menestymään Suomessa.",
-        hero2_subtitle: "Hyödy yli 6 vuoden erityisasiantuntemuksestamme suomalaisessa kirjanpidossa.",
-        hero2_title: "Asiantuntemuksemme on luotettava etusi.",
-        contact_button: "Ota yhteyttä",
-        why_us_title: "Miksi valita Angel Financial Services?",
-        why_us_text: "Angel Oy:ssä omaksumme eteenpäin katsovan lähestymistavan, joka perustuu tulevaisuuden potentiaaliin. Brändimme kuvastaa yritysten ohjaamista asiantuntevilla talousratkaisuilla, auttaen niitä näkemään talousmaisemansa selkeästi. Palveluvalikoimamme ulottuu perusliiketoimia pidemmälle.",
-        why_us_box1: "Autamme sinua kaikessa osakeyhtiön (Oy) ja yksityisen yrityksen rekisteröintiin liittyvässä.",
-        why_us_box2: "Hoidamme puolestasi kuukausikirjanpidon, ALV-laskelmat, ALV-raportit ja palkanlaskennan.",
         why_us_box3: "Kun sinä kehität ydinliiketoimintaasi, me huolehdimme taloudellisista monimutkaisuuksista yksinkertaistaen ne puolestasi.",
         service1_title: "Yritysrekisteröinti",
-        service1_text: "Yrityksen perustaminen voi olla ylivoimaista. Jos sinulla on loistava liikeidea, mutta olet epävarma oikeasta yhtiömuodosta tai koet rekisteröinnin hämmentäväksi, älä huoli – me autamme sinua. Prosessiin liittyy usein byrokraattisia menettelyjä ja koordinointia eri viranomaisten kanssa, minkä voit jättää meidän huoleksemme.",
         service2_title: "Kuukausikirjanpito",
-        service2_text: "Angel Financial Services Oy:ssä tarjoamme kattavan kuukausikirjanpitopalvelun, joka varmistaa, että talousasiasi ovat ammattitaitoisissa käsissä. Tiimimme kirjaa kaikki ostosi ja myyntisi nykyaikaisiin tietokonejärjestelmiimme. Laadimme yksityiskohtaiset tuloslaskelmat antaaksemme selkeän kuvan taloudellisesta tilanteestasi.",
         service3_title: "Tilinpäätös ja räätälöity kirjanpito",
-        service3_text: "Yrityksen omistajana saatat usein tarkastella laajoja edellisen vuoden raportteja arvioidaksesi voittoasi tai tappiotasi. Omistautunut tiimimme yksinkertaistaa tämän prosessin puolestasi. Luomme raportit ja autamme sinua analysoimaan niitä.",
         service4_title: "Konsultaatiot ja strateginen neuvonta",
-        service4_text: "Asiantuntijamme eri taustoilta auttavat sinua arvioimaan taloudellista tilannettasi ja tarjoavat arvokkaita näkemyksiä sekä neuvoja liiketoimintaasi. Olemme täällä auttaaksemme sinua. Olipa kyse sitten säännösten noudattamisesta, talousstrategioiden optimoinnista tai operatiivisten esteiden voittamisesta, tarjoamme toteuttamiskelpoisia ratkaisuja, jotka vastaavat juuri sinun yrityksesi tarpeita.",
         service5_title: "Älykäs palkanlaskenta ja henkilöstöhallinnon ratkaisut",
-        service5_text: "Angel Oy:n palkanlaskentapalvelun tarkoituksena on varmistaa, että työntekijöillesi maksetaan korvaus tarkasti ja kaikkien lakisääteisten vaatimusten mukaisesti. Asiantuntijatiimimme laskee palkat ja palkkiot ammattitaitoisesti noudattaen Suomen työlakeja, työehtosopimuksia ja ammattiliittojen säännöksiä. Tämä auttaa sinua ylläpitämään positiivisia suhteita työntekijöihisi.",
         service6_title: "Verosuunnittelu ja optimointi",
-        service6_text: "Tarjoamme asiantuntevia verosuunnittelustrategioita auttaaksemme yrityksiä vähentämään verovelvoitteita, maksimoimaan vähennyksiä ja varmistamaan täyden noudattamisen Suomen verolakien mukaisesti. Henkilökohtainen lähestymistapamme mahdollistaa tehokkaan verotuksen ennakoinnin ja suunnittelun, varmistaen että yritykset voivat tehdä tietoon perustuvia taloudellisia päätöksiä.",
-        consult_title: "Konsultoimme johtajia strategiassa",
-        consult_subtitle: "Sinun kasvusuhdanteesi, meidän intohimomme.",
         stat1_title: "Vuosien kokemus",
         stat2_title: "Palvelukieliä",
         stat3_title: "Tyytyväiset asiakkaat",
         stat4_title: "Perustetut yritykset",
-        contact_button_2: "Ota yhteyttä",
         footer_slogan: "Taloudelliset suojelusenkelisi.",
         privacy_policy: "Tietosuojaseloste",
         termsofservice: "Käyttöehdot",
@@ -138,7 +112,6 @@ const Translation = {
         contact_s1_form_phone_placeholder: "Puhelinnumero",
         contact_s1_form_email_placeholder: "Sähköpostiosoitteesi *",
         contact_s1_form_company_placeholder: "Yrityksen nimi",
-        contact_s1_form_service_placeholder: "Palvelu",
         contact_s1_form_service_default: "Palvelu, josta olet kiinnostunut",
         contact_s1_form_service_accounting: "Kuukausikirjanpito",
         contact_s1_form_service_payroll: "Palkanlaskenta",
@@ -150,7 +123,70 @@ const Translation = {
         contact_s1_form_message_placeholder: "Viestisi *",
         contact_s1_form_button: "Lähetä",
 
+        // Home page
+        home_langs_label: "Palvelukielet",
+        home_eyebrow: "Tilitoimisto Helsingissä · Taloudelliset suojelusenkelisi",
+        home_title_1: "Tilitoimisto, joka puhuu",
+        home_title_2: "sinun kieltäsi.",
+        home_lead: "Hoidamme yrityksesi kirjanpidon, palkat, ALV-ilmoitukset ja tilinpäätöksen – ja autamme yrityksen perustamisessa. Palvelemme suomeksi, englanniksi, viroksi, hindiksi ja arabiaksi.",
+        cta_quote: "Pyydä tarjous",
+        cta_call: "Soita",
+        home_trust_1: "Yli 300 tyytyväistä asiakasta",
+        home_trust_2: "Yli 180 perustettua yritystä",
+        home_trust_3: "Vastaamme 1–2 arkipäivässä",
+        home_team_card_title: "Tiimimme auttaa sinua",
+        home_team_card_text: "5 asiantuntijaa · 5 kieltä · Helsinki",
+        home_lang_eyebrow: "Palvelemme viidellä kielellä",
+        home_lang_title: "Tarvitsetko kirjanpitäjän? Kysy omalla kielelläsi.",
+        home_lang_text: "Suomen verotus ja viranomaisasiat ovat hankalia jo suomeksi. Meiltä saat neuvot ja palvelun kielellä, jonka ymmärrät parhaiten – ilman väärinkäsityksiä.",
+        home_services_eyebrow: "Palvelut",
+        home_services_title: "Kaikki taloushallinto samasta paikasta",
+        home_all_services: "Kaikki palvelut",
+        home_srv1_text: "Autamme valitsemaan oikean yhtiömuodon ja hoidamme perustamisilmoituksen sekä rekisteröinnit.",
+        home_srv2_text: "Kirjaamme ostot ja myynnit sekä teemme ALV-laskelmat ja selkeät tuloslaskelmat joka kuukausi.",
+        home_srv3_text: "Laadimme lakisääteisen tilinpäätöksen ja veroilmoitukset – ja autamme ymmärtämään luvut.",
+        home_srv4_text: "Arvioimme taloudellisen tilanteesi ja annamme käytännön neuvoja kannattavuuteen ja kasvuun.",
+        home_srv5_text: "Oikeat palkat ajallaan työehtosopimusten ja Suomen työlainsäädännön mukaan.",
+        home_srv6_text: "Suunnittelemme verotuksen ennakoivasti ja hoidamme ALV-raportit ajallaan.",
+        home_more: "Lue lisää →",
+        home_who_eyebrow: "Kenelle",
+        home_who_title: "Apua yrityksen jokaiseen vaiheeseen",
+        home_who1_title: "Aloittava yrittäjä",
+        home_who1_text: "Toiminimi vai osakeyhtiö? Autamme valinnassa ja hoidamme perustamisilmoituksen ja rekisteröinnit.",
+        home_who2_title: "Pienet ja keskisuuret yritykset",
+        home_who2_text: "Kirjanpito, ALV-ilmoitukset, palkat ja tilinpäätös yhdestä paikasta – selkeästi ja ajallaan.",
+        home_who3_title: "Ulkomainen yrittäjä Suomessa",
+        home_who3_text: "Selitämme suomalaisen verotuksen ja byrokratian omalla kielelläsi ja hoidamme asioinnin viranomaisten kanssa.",
+        home_who4_title: "Taksi- ja kuljetusala",
+        home_who4_text: "Tunnemme kuljetus- ja taksialan kirjanpidon erityispiirteet käytännön kokemuksesta.",
+        home_steps_eyebrow: "Näin pääset alkuun",
+        home_steps_title: "Kolme askelta selkeään talouteen",
+        home_step1_title: "Ota yhteyttä",
+        home_step1_text: "Soita, lähetä sähköpostia tai täytä lomake – sillä kielellä, joka sinulle sopii.",
+        home_step2_title: "Saat tarjouksen",
+        home_step2_text: "Käymme tilanteesi läpi ja teemme tarjouksen yrityksesi koon ja tarpeiden mukaan.",
+        home_step3_title: "Me hoidamme loput",
+        home_step3_text: "Hoidamme kirjanpidon, palkat ja ilmoitukset – etänä tai tapaamisissa toimistollamme Helsingissä.",
+        home_stats_title: "Angel lukuina",
+        home_quote: "”Jos teet jotain, tee se hyvin.”",
+        home_quote_role: "Toimitusjohtaja, kirjanpitäjä",
+        home_team_eyebrow: "Tiimi",
+        home_team_title: "Ihmiset numeroiden takana",
+        home_team_text: "Monikulttuurinen tiimimme yhdistää suomalaisen kirjanpidon osaamisen ja kansainvälisen kokemuksen. Klikkaa kuvaa ja tutustu meihin.",
+        home_team_button: "Tutustu tiimiin →",
+        home_contact_eyebrow: "Yhteydenotto",
+        home_contact_title: "Pyydä tarjous",
+        home_contact_text: "Kerro lyhyesti yrityksestäsi ja siitä, missä tarvitset apua. Vastaamme 1–2 arkipäivän kuluessa.",
+        home_contact_call: "Soita meille",
+        home_contact_email: "Sähköposti",
+        home_contact_office: "Toimisto",
+        home_contact_hours: "Ma–to 10–16, pe verkossa 10–16",
+        home_message_placeholder: "Esim. perustan osakeyhtiön ja tarvitsen kirjanpitäjän",
+        home_submit: "Lähetä tarjouspyyntö",
+        home_privacy_note: "Käsittelemme tietojasi luottamuksellisesti.",
+
         // Contact form labels (read by screen readers)
+        label_language: "Asiointikieli",
         label_firstname: "Etunimi",
         label_lastname: "Sukunimi",
         label_email: "Sähköposti",
@@ -172,9 +208,9 @@ const Translation = {
 
         // Cookie banner and map
         cookie_title: "Evästeet",
-        cookie_text: "Käytämme sivuston toimintaan vain välttämättömiä tekniikoita. Jos hyväksyt, käytämme lisäksi Google Analyticsia kävijätilastointiin ja näytämme Google Mapsin kartan. Voit muuttaa valintaasi milloin tahansa sivun alaosan Evästeasetukset-linkistä.",
-        cookie_more: "Lue lisää tietosuojaselosteesta",
-        cookie_accept: "Hyväksy kaikki",
+        cookie_text: "Käytämme Google Analyticsia kävijätilastointiin ja näytämme Google Mapsin kartan vain, jos hyväksyt.",
+        cookie_more: "Lisätietoja",
+        cookie_accept: "Hyväksy",
         cookie_reject: "Vain välttämättömät",
         cookie_settings: "Evästeasetukset",
         map_title: "Kartta: Ruosilantie 1 A, 00390 Helsinki",
@@ -189,10 +225,6 @@ const Translation = {
         menu_open: "Avaa valikko",
         menu_close: "Sulje valikko",
         close_button: "Sulje",
-        slider_prev: "Edellinen dia",
-        slider_next: "Seuraava dia",
-        slider_pause: "Pysäytä diaesitys",
-        slider_play: "Käynnistä diaesitys",
         form_sending: "Lähetetään...",
         form_success: "Kiitos viestistäsi! Otamme sinuun yhteyttä pian.",
         form_error: "Viestin lähetyksessä tapahtui virhe. Yritä uudelleen tai ota yhteyttä suoraan sähköpostitse: info@angeloy.fi",
@@ -204,35 +236,17 @@ const Translation = {
         nav_meista: "About Us",
         nav_tiimi: "Team",
         nav_yhteystiedot: "Contact",
-        hero1_title: "First flight to limitless heights, your financial guardian angels.",
-        hero1_subtitle: "We guide your company to succeed in Finland.",
-        hero2_subtitle: "Benefit from our 6+ years of special expertise in Finnish accounting.",
-        hero2_title: "Our expertise is your reliable advantage.",
-        contact_button: "Contact Us",
-        why_us_title: "Why Choose Angel Financial Services?",
-        why_us_text: "At Angel Oy, we adopt a forward-looking approach based on future potential. Our brand reflects guiding companies with expert financial solutions, helping them to see their financial landscape clearly. Our range of services extends beyond basic business transactions.",
-        why_us_box1: "We help you with everything related to registering a limited liability company (Oy) and a private enterprise.",
-        why_us_box2: "We handle monthly accounting, VAT calculations, VAT reports, and payroll on your behalf.",
         why_us_box3: "While you develop your core business, we take care of financial complexities, simplifying them for you.",
         service1_title: "Company Registration",
-        service1_text: "Starting a business can be overwhelming. If you have a great business idea but are unsure of the right company form or find the registration confusing, don't worry – we are here to help. The process often involves bureaucratic procedures and coordination with various authorities, which you can leave to us.",
         service2_title: "Monthly Bookkeeping",
-        service2_text: "At Angel Financial Services Oy, we offer a comprehensive monthly bookkeeping service that ensures your finances are in professional hands. Our team records all your purchases and sales in our modern computer systems. We prepare detailed income statements to give a clear picture of your financial situation.",
         service3_title: "Financial Statements and Custom Accounting",
-        service3_text: "As a business owner, you may often review extensive reports from the previous year to assess your profit or loss. Our dedicated team simplifies this process for you. We create the reports and help you analyze them.",
         service4_title: "Consultations and Strategic Advice",
-        service4_text: "Our experts from various backgrounds help you assess your financial situation and offer valuable insights and advice for your business. We are here to help you. Whether it's regulatory compliance, optimizing financial strategies, or overcoming operational hurdles, we provide actionable solutions that meet the specific needs of your company.",
         service5_title: "Smart Payroll and HR Solutions",
-        service5_text: "Angel Oy's payroll service is designed to ensure that your employees are compensated accurately and in accordance with all legal requirements. Our expert team professionally calculates wages and salaries, adhering to Finnish labor laws, collective agreements, and trade union regulations. This helps you maintain positive relationships with your employees.",
         service6_title: "Tax Planning and Optimization",
-        service6_text: "We offer expert tax planning strategies to help businesses reduce tax liabilities, maximize deductions, and ensure full compliance with Finnish tax laws. Our personalized approach enables effective tax forecasting and planning, ensuring that companies can make informed financial decisions.",
-        consult_title: "We Consult Leaders on Strategy",
-        consult_subtitle: "Your growth cycle, our passion.",
         stat1_title: "Years of experience",
         stat2_title: "Languages",
         stat3_title: "Satisfied customers",
         stat4_title: "Companies established",
-        contact_button_2: "Contact Us",
         footer_slogan: "Your financial guardian angels.",
         privacy_policy: "Privacy policy",
         termsofservice: "Terms of Service",
@@ -315,7 +329,6 @@ const Translation = {
         contact_s1_form_lastname_placeholder: "Last Name *",
         contact_s1_form_phone_placeholder: "Phone Number",
         contact_s1_form_company_placeholder: "Company Name",
-        contact_s1_form_service_placeholder: "Service",
         contact_s1_form_service_default: "Service you are interested in",
         contact_s1_form_service_accounting: "Monthly accounting",
         contact_s1_form_service_payroll: "Payroll",
@@ -328,7 +341,70 @@ const Translation = {
         contact_s1_form_message_placeholder: "Your Message *",
         contact_s1_form_button: "Send",
 
+        // Home page
+        home_langs_label: "Service languages",
+        home_eyebrow: "Accounting firm in Helsinki · Your financial guardian angels",
+        home_title_1: "The accounting firm that speaks",
+        home_title_2: "your language.",
+        home_lead: "We take care of your company's bookkeeping, payroll, VAT returns and financial statements – and help you start your business. We serve you in Finnish, English, Estonian, Hindi and Arabic.",
+        cta_quote: "Get a quote",
+        cta_call: "Call",
+        home_trust_1: "300+ satisfied clients",
+        home_trust_2: "180+ companies founded",
+        home_trust_3: "Reply within 1–2 business days",
+        home_team_card_title: "Our team is here to help",
+        home_team_card_text: "5 experts · 5 languages · Helsinki",
+        home_lang_eyebrow: "Service in five languages",
+        home_lang_title: "Need an accountant? Ask in your own language.",
+        home_lang_text: "Finnish taxes and paperwork are hard enough in Finnish. With us, you get advice and service in the language you understand best – without misunderstandings.",
+        home_services_eyebrow: "Services",
+        home_services_title: "All your financial administration in one place",
+        home_all_services: "All services",
+        home_srv1_text: "We help you choose the right company form and take care of the start-up notification and registrations.",
+        home_srv2_text: "We record your purchases and sales and prepare VAT calculations and clear income statements every month.",
+        home_srv3_text: "We prepare your statutory financial statements and tax returns – and help you understand the numbers.",
+        home_srv4_text: "We assess your financial situation and give practical advice on profitability and growth.",
+        home_srv5_text: "Correct salaries on time, in line with collective agreements and Finnish labour law.",
+        home_srv6_text: "We plan your taxes ahead and file your VAT reports on time.",
+        home_more: "Read more →",
+        home_who_eyebrow: "Who we help",
+        home_who_title: "Support at every stage of your business",
+        home_who1_title: "Starting a business",
+        home_who1_text: "Sole trader (toiminimi) or limited company (Oy)? We help you choose and take care of the registration.",
+        home_who2_title: "Small and medium-sized businesses",
+        home_who2_text: "Bookkeeping, VAT returns, payroll and financial statements in one place – clear and on time.",
+        home_who3_title: "Foreign entrepreneurs in Finland",
+        home_who3_text: "We explain Finnish taxation and bureaucracy in your language and deal with the authorities for you.",
+        home_who4_title: "Taxi and transport companies",
+        home_who4_text: "We know the specifics of transport and taxi accounting from hands-on experience.",
+        home_steps_eyebrow: "How to get started",
+        home_steps_title: "Three steps to clear finances",
+        home_step1_title: "Get in touch",
+        home_step1_text: "Call, email or fill in the form – in the language that suits you.",
+        home_step2_title: "Receive a quote",
+        home_step2_text: "We go through your situation and make you an offer based on the size and needs of your company.",
+        home_step3_title: "We handle the rest",
+        home_step3_text: "We take care of bookkeeping, payroll and filings – remotely or in meetings at our Helsinki office.",
+        home_stats_title: "Angel in numbers",
+        home_quote: "“If you do something, do it well.”",
+        home_quote_role: "CEO, accountant",
+        home_team_eyebrow: "Team",
+        home_team_title: "The people behind the numbers",
+        home_team_text: "Our multicultural team combines Finnish accounting expertise with international experience. Click a photo to get to know us.",
+        home_team_button: "Meet the team →",
+        home_contact_eyebrow: "Contact",
+        home_contact_title: "Get a quote",
+        home_contact_text: "Tell us briefly about your company and what you need help with. We reply within 1–2 business days.",
+        home_contact_call: "Call us",
+        home_contact_email: "Email",
+        home_contact_office: "Office",
+        home_contact_hours: "Mon–Thu 10–16, Fri online 10–16",
+        home_message_placeholder: "E.g. I am starting a limited company and need an accountant",
+        home_submit: "Send quote request",
+        home_privacy_note: "We handle your details confidentially.",
+
         // Contact form labels (read by screen readers)
+        label_language: "Preferred language",
         label_firstname: "First name",
         label_lastname: "Last name",
         label_email: "Email",
@@ -350,9 +426,9 @@ const Translation = {
 
         // Cookie banner and map
         cookie_title: "Cookies",
-        cookie_text: "We only use technology that the site needs to work. If you accept, we also use Google Analytics for visitor statistics and show a Google Maps map. You can change your choice at any time from the Cookie settings link at the bottom of the page.",
-        cookie_more: "Read more in our privacy policy (in Finnish)",
-        cookie_accept: "Accept all",
+        cookie_text: "We only use Google Analytics for visitor statistics and show Google Maps if you accept.",
+        cookie_more: "More info",
+        cookie_accept: "Accept",
         cookie_reject: "Necessary only",
         cookie_settings: "Cookie settings",
         map_title: "Map: Ruosilantie 1 A, 00390 Helsinki",
@@ -367,10 +443,6 @@ const Translation = {
         menu_open: "Open menu",
         menu_close: "Close menu",
         close_button: "Close",
-        slider_prev: "Previous slide",
-        slider_next: "Next slide",
-        slider_pause: "Pause slideshow",
-        slider_play: "Play slideshow",
         form_sending: "Sending...",
         form_success: "Thank you for your message! We will get back to you soon.",
         form_error: "Something went wrong while sending your message. Please try again or email us directly at info@angeloy.fi",
@@ -383,35 +455,17 @@ const Translation = {
         nav_meista: "Meist",
         nav_tiimi: "Meeskond",
         nav_yhteystiedot: "Kontakt",
-        hero1_title: "Esmalend piiritutesse kõrgustesse, teie finantsasjade kaitseinglid.",
-        hero1_subtitle: "Aitame teie ettevõttel Soomes edu saavutada.",
-        hero2_subtitle: "Kasutage meie enam kui 6-aastast erialast asjatundlikkust Soome raamatupidamises.",
-        hero2_title: "Meie asjatundlikkus on teie usaldusväärne eelis.",
-        contact_button: "Võta ühendust",
-        why_us_title: "Miks valida Angel Financial Services?",
-        why_us_text: "Angel Oy's lähtume tulevikku vaatavast lähenemisest, mis põhineb tuleviku potentsiaalil. Meie bränd peegledab ettevõtete juhendamist asjatundlike finantslahendustega, aidates neil oma finantsmaastikku selgelt näha. Meie teenuste valik ulatub kaugemale tavapärastest äritehingutest.",
-        why_us_box1: "Aitame teid kõiges, mis on seotud osaühingu (Oy) ja eraettevõtte registreerimisega.",
-        why_us_box2: "Tegeleme teie eest igakuise raamatupidamise, käibemaksuarvestuse, käibemaksuaruannete ja palgaarvestusega.",
         why_us_box3: "Samal ajal kui teie arendate oma põhitegevust, hoolitseme meie finantskeerukuste eest, lihtsustades neid teie jaoks.",
         service1_title: "Ettevõtte registreerimine",
-        service1_text: "Ettevõtte asutamine võib olla üle jõu käiv. Kui teil on suurepärane äriidee, kuid olete ebakindel õige ettevõtlusvormi osas või peate registreerimist segaseks, ärge muretsege – meie aitame teid. Protsess hõlmab sageli bürokraatlikke protseduure ja kooskõlastamist erinevate ametiasutustega, mille võite jätta meie hooleks.",
         service2_title: "Igakuine raamatupidamine",
-        service2_text: "Angel Financial Services Oy pakub laiaulatuslikku igakuist raamatupidamisteenust, mis tagab, et teie finantsasjad on professionaalsetes kätes. Meie meeskond kannab kõik teie ostud ja müügid meie kaasaegsetesse arvutisüsteemidesse. Koostame üksikasjalikud kasumiaruanded, et anda selge ülevaade teie finantsolukorrast.",
         service3_title: "Majandusaasta aruanded ja kohandatud raamatupidamine",
-        service3_text: "Ettevõtte omanikuna võite sageli vaadata eelmise aasta laiaulatuslikke aruandeid, et hinnata oma kasumit või kahjumit. Meie pühendunud meeskond lihtsustab seda protsessi teie jaoks. Loome aruanded ja aitame teil neid analüüsida.",
         service4_title: "Konsultatsioonid ja strateegiline nõustamine",
-        service4_text: "Meie erineva taustaga asjatundjad aitavad teil hinnata oma finantsolukorda ning pakuvad väärtuslikke teadmisi ja nõuandeid teie äritegevuseks. Oleme siin, et teid aidata. Olgu tegemist eeskirjade järgimise, finantsstrateegiate optimeerimise või tegevustakistuste ületamisega, pakume teostatavaid lahendusi, mis vastavad just teie ettevõtte vajadustele.",
         service5_title: "Nutikas palgaarvestus ja personalijuhtimise lahendused",
-        service5_text: "Angel Oy palgaarvestusteenuse eesmärk on tagada, et teie töötajatele makstakse tasu täpselt ja vastavalt kõigile seaduslikele nõuetele. Meie asjatundjate meeskond arvutab palgad ja preemiad professionaalselt, järgides Soome tööseadusi, kollektiivlepinguid ja ametiühingute eeskirju. See aitab teil säilitada positiivseid suhteid oma töötajatega.",
         service6_title: "Maksude planeerimine ja optimeerimine",
-        service6_text: "Pakume asjatundlikke maksude planeerimise strateegiaid, et aidata ettevõtetel vähendada maksukohustusi, maksimeerida mahaarvamisi ja tagada täielik vastavus Soome maksuseadustele. Meie isikupärane lähenemine võimaldab tõhusat maksuprognoosimist ja planeerimist, tagades, et ettevõtted saavad teha teadlikke finantsotsuseid.",
-        consult_title: "Konsulteerime ettevõtte juhte strateegias",
-        consult_subtitle: "Teie kasv, meie kirg.",
         stat1_title: "Aastatepikkune kogemus",
         stat2_title: "Teeninduskeeled",
         stat3_title: "Rahulolevad kliendid",
         stat4_title: "Asutatud ettevõtted",
-        contact_button_2: "Võta ühendust",
         footer_slogan: "Teie finantsasjade kaitseinglid.",
         footer_copyright: "{year} © Angel Financial Services Oy. All rights reserved.",
 
@@ -448,7 +502,6 @@ const Translation = {
         meista_s4_button: "BRONEERI AEG",
         meista_s5_title: "Keskendu edule – meie tegeleme numbritega.",
         meista_s5_subtitle: "Võta ühendust ja aitame sind juba täna!",
-        meista_s5_name_placeholder: "Sinu nimi",
         meista_s5_email_placeholder: "Sinu e-posti aadress",
         meista_s5_button: "Saada",
         meista_s5_text_right: "Oleme teie usaldusväärne finantspartner. Aitame teie ettevõttel saavutada kasumlikkust, kasvu ja pikaajalist edu.",
@@ -485,7 +538,6 @@ const Translation = {
         contact_s1_hours_mon_thu: "Esmaspäev - Neljapäev 10-16",
         contact_s1_hours_fri: "Reede võrgus 10-16",
         contact_s1_hours_sat_sun: "Laupäev - Pühapäev SULETUD",
-        contact_s1_form_name_placeholder: "Sinu nimi",
         contact_s1_form_email_placeholder: "Sinu e-posti aadress",
         contact_s1_form_message_placeholder: "Sinu sõnum",
         contact_s1_form_button: "Saada",
@@ -739,117 +791,6 @@ const MobileMenu = {
     }
 };
 
-// === PARALLAX MODULE ===
-const Parallax = {
-    heroSection: null,
-    backgrounds: [],
-    ticking: false,
-
-    init() {
-        this.heroSection = document.querySelector('.hero-slider')?.parentElement;
-        this.backgrounds = [...document.querySelectorAll('.swiper-parallax-bg')];
-        if (this.heroSection) {
-            window.addEventListener('scroll', () => this.onScroll(), { passive: true });
-        }
-    },
-
-    onScroll() {
-        if (!this.ticking) {
-            window.requestAnimationFrame(() => {
-                this.updateParallax();
-                this.ticking = false;
-            });
-            this.ticking = true;
-        }
-    },
-
-    updateParallax() {
-        const scrollTop = window.scrollY;
-
-        if (scrollTop < this.heroSection.offsetHeight) {
-            this.backgrounds.forEach(bg => {
-                bg.style.transform = `translateY(${scrollTop * 0.3}px)`;
-            });
-        }
-    }
-};
-
-// === SLIDER MODULE ===
-const Slider = {
-    swiper: null,
-    toggleButton: null,
-
-    init() {
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        this.swiper = new Swiper('.hero-slider', {
-            loop: SWIPER_CONFIG.LOOP,
-            effect: SWIPER_CONFIG.EFFECT,
-            speed: SWIPER_CONFIG.SPEED,
-            // Visitors who ask for reduced motion get a still slider they can
-            // move with the arrows.
-            autoplay: reduceMotion ? false : {
-                delay: SWIPER_CONFIG.AUTOPLAY_DELAY,
-                disableOnInteraction: true,
-                pauseOnMouseEnter: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            parallax: true,
-            a11y: {
-                prevSlideMessage: Translation.t('slider_prev'),
-                nextSlideMessage: Translation.t('slider_next'),
-            }
-        });
-
-        this.setupAutoplayToggle();
-        this.loadDeferredBackgrounds();
-    },
-
-    // A visible pause/play button, so the slideshow can be stopped (WCAG 2.2.2).
-    setupAutoplayToggle() {
-        this.toggleButton = document.getElementById('hero-autoplay-toggle');
-        if (!this.toggleButton) return;
-
-        this.toggleButton.addEventListener('click', () => {
-            if (this.swiper.autoplay.running) {
-                this.swiper.autoplay.stop();
-            } else {
-                this.swiper.autoplay.start();
-            }
-        });
-        this.swiper.on('autoplayStart', () => this.updateAutoplayToggle());
-        this.swiper.on('autoplayStop', () => this.updateAutoplayToggle());
-        document.addEventListener('languagechange', () => this.updateAutoplayToggle());
-        this.updateAutoplayToggle();
-    },
-
-    updateAutoplayToggle() {
-        const running = this.swiper.autoplay.running;
-        const key = running ? 'slider_pause' : 'slider_play';
-        this.toggleButton.setAttribute('data-translate-aria-label', key);
-        this.toggleButton.setAttribute('aria-label', Translation.t(key));
-        this.toggleButton.querySelector('.icon-pause').classList.toggle('hidden', !running);
-        this.toggleButton.querySelector('.icon-play').classList.toggle('hidden', running);
-    },
-
-    // Slides after the first one get their background image only once the page
-    // has loaded, so they do not compete with the first slide for bandwidth.
-    loadDeferredBackgrounds() {
-        const load = () => document.querySelectorAll('[data-bg]').forEach(el => {
-            el.style.backgroundImage = `url('${el.dataset.bg}')`;
-            el.removeAttribute('data-bg');
-        });
-        if (document.readyState === 'complete') {
-            load();
-        } else {
-            window.addEventListener('load', load, { once: true });
-        }
-    }
-};
-
 // === SCROLL ANIMATIONS MODULE ===
 const ScrollAnimations = {
     observer: null,
@@ -1042,6 +983,25 @@ const FormHandler = {
     init() {
         document.querySelectorAll('form').forEach(form => {
             form.addEventListener('submit', (e) => this.handleSubmit(e));
+        });
+
+        const languageSelects = document.querySelectorAll('select[name="language"]');
+        languageSelects.forEach(select => {
+            select.addEventListener('change', () => { select.dataset.chosen = 'true'; });
+        });
+        const followPageLanguage = () => languageSelects.forEach(select => {
+            if (!select.dataset.chosen) select.value = Translation.currentLang;
+        });
+        document.addEventListener('languagechange', followPageLanguage);
+        followPageLanguage();
+
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('[data-contact-lang]');
+            if (!link) return;
+            languageSelects.forEach(select => {
+                select.value = link.dataset.contactLang;
+                select.dataset.chosen = 'true';
+            });
         });
     },
 
@@ -1329,7 +1289,7 @@ const ImageHandler = {
 // Each module starts on its own, so one failing module (for example the
 // slider) does not leave the rest of the page without its features.
 document.addEventListener('DOMContentLoaded', function() {
-    const modules = { ImageHandler, Translation, Navigation, Seo, Consent, MobileMenu, Parallax, Slider, ScrollAnimations, TeamModal, FormHandler };
+    const modules = { ImageHandler, Translation, Navigation, Seo, Consent, MobileMenu, ScrollAnimations, TeamModal, FormHandler };
 
     Object.entries(modules).forEach(([name, module]) => {
         try {
