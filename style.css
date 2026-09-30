@@ -113,10 +113,6 @@ body {
     color: #333333;
 }
 
-.text-gray-500 {
-    white-space: pre-line;
-}
-
 /* === NAVIGATION === */
 .nav-link.active {
     color: #d9b10d;
@@ -166,45 +162,43 @@ body {
     }
 }
 
-/* === SCROLL ANIMATIONS === */
-.reveal,
-.reveal-slide-left,
-.reveal-slide-right {
+/* === SCROLL ANIMATIONS ===
+   Content is only hidden for the fade-in when JavaScript is running (the
+   "js" class is set in <head>), so it stays readable without JavaScript. */
+.js .reveal,
+.js .reveal-slide-left,
+.js .reveal-slide-right {
     opacity: 0;
     transition: opacity 0.8s ease-out, transform 0.6s ease-out;
 }
 
-.reveal {
+.js .reveal {
     transform: translateY(50px);
 }
 
-.reveal-slide-left {
+.js .reveal-slide-left {
     transform: translateX(-100px);
     transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal-slide-right {
+.js .reveal-slide-right {
     transform: translateX(100px);
     transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal.visible,
-.reveal-slide-left.visible,
-.reveal-slide-right.visible {
+.js .reveal.visible,
+.js .reveal-slide-left.visible,
+.js .reveal-slide-right.visible {
     opacity: 1;
     transform: translate(0, 0);
 }
 
 /* === PAGE MANAGEMENT === */
-.page.hidden {
+.page[hidden] {
     display: none;
 }
 
 /* === MODAL === */
-#team-modal.hidden {
-    display: none;
-}
-
 #team-modal-content {
     animation: slide-up 0.4s ease-out;
 }
@@ -277,11 +271,8 @@ button:focus:not(:focus-visible) {
         display: none !important;
     }
     
-    .page {
-        display: block !important;
-    }
-    
-    .page.hidden {
+    .page,
+    .page[hidden] {
         display: block !important;
     }
 }
@@ -349,7 +340,7 @@ button:focus:not(:focus-visible) {
     transform: translateY(-5px);
 }
 
-.team-member-card:focus {
+.team-member-button:focus-visible {
     outline: 2px solid #f1c50e;
     outline-offset: 4px;
 }
@@ -378,6 +369,11 @@ html {
 /* === MOBILE MENU === */
 #mobile-menu {
     transition: opacity 0.3s ease;
+}
+
+/* Headings and sections that receive focus after page navigation */
+[tabindex="-1"]:focus {
+    outline: none;
 }
 
 /* === SKIP TO CONTENT (Accessibility) === */

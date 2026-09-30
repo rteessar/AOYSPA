@@ -3,12 +3,6 @@
    ======================================== */
 
 // === CONSTANTS ===
-const ANIMATION_DELAYS = {
-    SHORT: 100,
-    MEDIUM: 200,
-    LONG: 300
-};
-
 const SWIPER_CONFIG = {
     LOOP: false,
     EFFECT: 'fade',
@@ -61,7 +55,7 @@ const Translation = {
         privacy_policy: "Tietosuojaseloste",
         termsofservice: "Käyttöehdot",
         faq: "Usein Kysytyt Kysymykset",
-        footer_copyright: "2025 © Angel Financial Services Oy. Kaikki oikeudet pidätetään.",
+        footer_copyright: "{year} © Angel Financial Services Oy. Kaikki oikeudet pidätetään.",
         
         // Palvelut Page
         palvelut_hero_slogan1_1: "Sinun",
@@ -121,7 +115,7 @@ const Translation = {
         member3_desc: "Hän on taloushallinnon ammattilainen, joka nauttii siitä, kun luvut ovat kohdillaan ja prosessit toimivat saumattomasti. Hänen vahva osaamisensa kattaa kirjanpidon, ostoreskontran, myyntireskontran ja perinnän. Hänen työskentelyssään yhdistyvät tarkkuus, vastuullisuus ja aito halu löytää sujuvia ratkaisuja arjen taloushallinnon haasteisiin. Hänelle on tärkeää tehdä työnsä huolellisesti ja asiakaslähtöisesti. Hän uskoo, että parhaat tulokset syntyvät hyvästä yhteistyöstä ja avoimesta viestinnästä. Hänen äidinkielensä on suomi, ja hän puhuu sujuvasti englantia, mikä auttaa häntä toimimaan tehokkaasti myös kansainvälisessä ympäristössä.",
         member4_name: "Teele Kullerkann",
         member4_title: "Kirjanpitäjä \nja \ntalousanalyytikkö",
-        member4_desc: "Tähän tulee kuvaus henkilöstä.",
+        member4_desc: "",
         member5_name: "Leena Bansal",
         member5_title: "Kirjanpitäjä \nja \ntalousanalyytikkö",
         member5_desc: "Leena on kokenut kirjanpidon ja taloushallinnon ammattilainen, jolla on yli 10 vuoden asiantuntemus Intiasta, jota täydentää käytännön kokemus Suomesta. Hän on erikoistunut keskeisiin taloushallinnon toimintoihin, kuten raportointiin, mukaan lukien taseiden ja tuloslaskelmien laatiminen, sekä budjetointiin, tilintarkastukseen ja kokonaisvaltaisiin kirjanpitopalveluihin. Syvällisen talousprosessien tuntemuksensa lisäksi hän on erittäin taitava palkanlaskennassa, laskutuksessa ja päivittäisissä kirjanpitotehtävissä. Hän käyttää sujuvasti johtavia kirjanpito-ohjelmistoja, kuten Procountoria, ja sopeutuu nopeasti paikallisiin säännöksiin ja vaatimuksiin.",
@@ -152,6 +146,21 @@ const Translation = {
         contact_s1_form_service_other: "Muu palvelu",
         contact_s1_form_message_placeholder: "Viestisi",
         contact_s1_form_button: "Lähetä",
+
+        // Shared UI
+        skip_link: "Siirry sisältöön",
+        logo_home: "Angel Financial Services - Etusivu",
+        menu_label: "Mobiilivalikko",
+        menu_open: "Avaa valikko",
+        menu_close: "Sulje valikko",
+        close_button: "Sulje",
+        slider_prev: "Edellinen dia",
+        slider_next: "Seuraava dia",
+        slider_pause: "Pysäytä diaesitys",
+        slider_play: "Käynnistä diaesitys",
+        form_sending: "Lähetetään...",
+        form_success: "Kiitos viestistäsi! Otamme sinuun yhteyttä pian.",
+        form_error: "Viestin lähetyksessä tapahtui virhe. Yritä uudelleen tai ota yhteyttä suoraan sähköpostitse: info@angeloy.fi",
     },
     en: {
         // Koti Page
@@ -193,7 +202,7 @@ const Translation = {
         privacy_policy: "Privacy policy",
         termsofservice: "Terms of Service",
         faq: "FAQ",
-        footer_copyright: "2025 © Angel Financial Services Oy. All rights reserved.",
+        footer_copyright: "{year} © Angel Financial Services Oy. All rights reserved.",
 
         // Palvelut Page
         palvelut_hero_slogan1_1: "Your",
@@ -252,7 +261,7 @@ const Translation = {
         member3_desc: "She is a financial administration professional who enjoys ensuring that figures are accurate and processes run seamlessly. Her strong expertise covers accounting, accounts payable, accounts receivable, and debt collection. Her approach to work combines precision, responsibility, and a genuine desire to find smooth solutions for everyday financial challenges. It is important for her to perform her duties carefully and with a customer-oriented focus. She believes that the best results are achieved through good collaboration and open communication. As a native Finnish speaker who is also fluent in English, she works effectively in international environments.",
         member4_name: "Teele Kullerkann",
         member4_title: "Accountant \n& \nfinancial advisor",
-        member4_desc: "Description of the person goes here.",
+        member4_desc: "",
         member5_name: "Leena Bansal",
         member5_title: "Accountant \n& \nfinancial advisor",
         member5_desc: "Leena is an experienced accounting and finance professional with over 10 years of expertise in India, complemented by recent hands-on experience in Finland. She specializes in key financial operations such as reporting, including the preparation of balance sheets and profit & loss statements, as well as budgeting, auditing, and complete bookkeeping services. In addition to her deep knowledge of financial processes, she is highly skilled in payroll management, invoicing, and day-to-day accounting operations. She is proficient with leading accounting software, including Procountor, and adapts quickly to local compliance requirements.",
@@ -283,6 +292,21 @@ const Translation = {
         contact_s1_form_email_placeholder: "Your Email Address",
         contact_s1_form_message_placeholder: "Your Message",
         contact_s1_form_button: "Send",
+
+        // Shared UI
+        skip_link: "Skip to content",
+        logo_home: "Angel Financial Services - Home",
+        menu_label: "Mobile menu",
+        menu_open: "Open menu",
+        menu_close: "Close menu",
+        close_button: "Close",
+        slider_prev: "Previous slide",
+        slider_next: "Next slide",
+        slider_pause: "Pause slideshow",
+        slider_play: "Play slideshow",
+        form_sending: "Sending...",
+        form_success: "Thank you for your message! We will get back to you soon.",
+        form_error: "Something went wrong while sending your message. Please try again or email us directly at info@angeloy.fi",
 
     },
     et: {
@@ -322,7 +346,7 @@ const Translation = {
         stat4_title: "Uued asutatud ettevõtted",
         contact_button_2: "Võta ühendust",
         footer_slogan: "Teie finantsasjade kaitseinglid.",
-        footer_copyright: "2025 © Angel Financial Services Oy. All Rights reserved.",
+        footer_copyright: "{year} © Angel Financial Services Oy. All rights reserved.",
 
          // Palvelut Page
         palvelut_hero_slogan1_1: "Sinu",
@@ -370,19 +394,19 @@ const Translation = {
         tiimi_s2_title: "Team Angel",
         member1_name: "Laivi Ijeh",
         member1_title: "Tegevjuht, \nRaamatupidaja",
-        member1_desc: "Siia tuleb isiku kirjeldus.",
+        member1_desc: "",
         member2_name: "Talal Mohammed",
         member2_title: "Vanem maksunõustaja \nja \nvastavusspetsialist",
-        member2_desc: "Siia tuleb isiku kirjeldus.",
+        member2_desc: "",
         member3_name: "Hanna Räsänen",
         member3_title: "Vanem \nFinantsnõustaja",
-        member3_desc: "Siia tuleb isiku kirjeldus.",
+        member3_desc: "",
         member4_name: "Teele Kullerkann",
         member4_title: "Raamatupidaja \nja \nnõuandja",
-        member4_desc: "Siia tuleb isiku kirjeldus.",
+        member4_desc: "",
         member5_name: "Leena Bansal",
         member5_title: "Raamatupidaja \nja \nnõuandja",
-        member5_desc: "Siia tuleb isiku kirjeldus.",
+        member5_desc: "",
 
         // Yhteystiedot Page
         contact_s1_title: "Kontaktandmed",
@@ -403,209 +427,246 @@ const Translation = {
     },
     
     set(lang) {
-        if (!this.data[lang]) {
+        const dict = this.data[lang];
+        if (!dict) {
             console.error(`Language ${lang} not found`);
             return;
         }
-        
+
         this.currentLang = lang;
-        const elementsToTranslate = document.querySelectorAll('[data-translate], [data-translate-placeholder]');
-        
-        elementsToTranslate.forEach(el => {
-            // Handle regular content translation
-            if (el.hasAttribute('data-translate')) {
-                const key = el.getAttribute('data-translate');
-                if (this.data[lang][key]) {
-                    // Translation strings are static content from this file, so
-                    // HTML strings can be inserted as-is.
-                    if (this.data[lang][key].startsWith('<p>')) {
-                        el.innerHTML = this.data[lang][key];
-                    } else {
-                        el.textContent = this.data[lang][key];
-                    }
-                }
-            }
-            
-            // Handle placeholder translation
-            if (el.hasAttribute('data-translate-placeholder')) {
-                const placeholderKey = el.getAttribute('data-translate-placeholder');
-                if (this.data[lang][placeholderKey]) {
-                    el.placeholder = this.data[lang][placeholderKey];
-                }
+
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const text = dict[el.getAttribute('data-translate')];
+            if (!text) return;
+            // Translation strings are static content from this file, so
+            // HTML strings can be inserted as-is.
+            if (text.startsWith('<p>')) {
+                el.innerHTML = text;
+            } else {
+                el.textContent = text.replace('{year}', new Date().getFullYear());
             }
         });
-        
+
+        document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+            const text = dict[el.getAttribute('data-translate-placeholder')];
+            if (text) el.placeholder = text;
+        });
+
+        document.querySelectorAll('[data-translate-aria-label]').forEach(el => {
+            const text = dict[el.getAttribute('data-translate-aria-label')];
+            if (text) el.setAttribute('aria-label', text);
+        });
+
         // Update active language button style
-        const allLangButtons = document.querySelectorAll('.lang-btn');
-        allLangButtons.forEach(btn => btn.classList.remove('active'));
-        
-        const activeButtons = document.querySelectorAll(`[onclick="Translation.set('${lang}')"]`);
-        activeButtons.forEach(btn => btn.classList.add('active'));
-        
-        // Set html lang attribute
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            const isActive = btn.dataset.lang === lang;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', String(isActive));
+        });
+
         document.documentElement.lang = lang;
-        
+
         // Store preference
         try {
             localStorage.setItem('preferred_language', lang);
         } catch (e) {
             console.warn('localStorage not available');
         }
+
+        document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang } }));
     },
-    
+
+    // Look up a single string in the current language (falls back to Finnish).
+    t(key) {
+        return this.data[this.currentLang][key] || this.data.fi[key] || '';
+    },
+
     init() {
-        // Load saved language preference
+        // Language buttons exist in the header and in the mobile menu copy.
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.lang-btn[data-lang]');
+            if (btn) this.set(btn.dataset.lang);
+        });
+
+        let lang = 'fi';
         try {
             const savedLang = localStorage.getItem('preferred_language');
-            if (savedLang && this.data[savedLang]) {
-                this.set(savedLang);
-                return;
-            }
+            if (savedLang && this.data[savedLang]) lang = savedLang;
         } catch (e) {
             console.warn('localStorage not available');
         }
-        
-        // Default to Finnish
-        this.set('fi');
+        this.set(lang);
     }
 };
 
 // === NAVIGATION MODULE ===
+// Each "page" is a <main class="page" data-page-id="..."> element; the URL hash
+// says which one is shown (#palvelut). A hash can also point at an element
+// inside a page (#ukk), which opens that page and scrolls to the element.
 const Navigation = {
-    pages: null,
-    navLinks: null,
-    
+    pages: [],
+    pageIds: [],
+    navLinks: [],
+    currentPage: null,
+
     init() {
-        this.pages = document.querySelectorAll('.page');
-        this.navLinks = document.querySelectorAll('.nav-link');
-        this.setupEventListeners();
+        this.pages = [...document.querySelectorAll('.page')];
+        this.pageIds = this.pages.map(page => page.dataset.pageId);
+        this.navLinks = [...document.querySelectorAll('.nav-link, .mobile-nav-link')];
+
+        document.addEventListener('click', (e) => this.onClick(e));
+        // Back/forward buttons: show the page from the URL without adding history.
+        window.addEventListener('popstate', () => this.showFromUrl());
+        this.showFromUrl();
     },
-    
-    showPage(pageId) {
+
+    onClick(e) {
+        // Let the browser handle new-tab clicks (ctrl/cmd/shift/middle click).
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+        const link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+
+        if (link.hasAttribute('data-skip-link')) {
+            e.preventDefault();
+            this.focusElement(this.pages.find(page => !page.hidden));
+            return;
+        }
+
+        const route = this.resolve(link.getAttribute('href').substring(1));
+        if (!route) return;
+
+        e.preventDefault();
+        this.go(route.pageId, route.target);
+    },
+
+    // Returns { pageId, target } for a hash, or null if the hash is neither a
+    // page nor an element inside a page.
+    resolve(hash) {
+        if (!hash) return { pageId: 'koti', target: null };
+        if (this.pageIds.includes(hash)) return { pageId: hash, target: null };
+
+        const target = document.getElementById(hash) || document.getElementById(hash.toLowerCase());
+        const page = target && target.closest('.page');
+        return page ? { pageId: page.dataset.pageId, target } : null;
+    },
+
+    showFromUrl() {
+        const route = this.resolve(window.location.hash.substring(1));
+        if (route) {
+            this.render(route.pageId, route.target);
+        } else if (!this.currentPage) {
+            this.render('koti', null);
+        }
+    },
+
+    // Navigation started by the visitor: add a history entry and move focus
+    // to the new content so screen readers announce it.
+    go(pageId, target = null) {
+        const hash = `#${target ? target.id : pageId}`;
+        if (window.location.hash !== hash) {
+            history.pushState(null, '', hash);
+        }
+        this.render(pageId, target);
+
+        const page = this.pages.find(p => p.dataset.pageId === pageId);
+        this.focusElement(target || page.querySelector('h1') || page);
+    },
+
+    render(pageId, target) {
         this.pages.forEach(page => {
-            page.classList.toggle('hidden', page.dataset.pageId !== pageId);
+            page.hidden = page.dataset.pageId !== pageId;
         });
-        
+
         this.navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href').substring(1) === pageId);
-        });
-        
-        // Scroll to top smoothly
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        
-        // Update URL hash without triggering scroll
-        history.pushState(null, '', `#${pageId}`);
-        
-        // Announce page change to screen readers
-        this.announcePageChange(pageId);
-    },
-    
-    announcePageChange(pageId) {
-        const announcement = document.createElement('div');
-        announcement.className = 'sr-only';
-        announcement.setAttribute('role', 'status');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.textContent = `Navigated to ${pageId} page`;
-        document.body.appendChild(announcement);
-        
-        setTimeout(() => announcement.remove(), 1000);
-    },
-    
-    setupEventListeners() {
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', () => {
-            const hash = window.location.hash.substring(1);
-            if (hash) {
-                this.showPage(hash);
+            const isActive = link.getAttribute('href') === `#${pageId}`;
+            link.classList.toggle('active', isActive);
+            if (isActive) {
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.removeAttribute('aria-current');
             }
         });
-        
-        // Load correct page on initial load
-        const initialHash = window.location.hash.substring(1);
-        if (initialHash) {
-            this.showPage(initialHash);
+
+        if (target) {
+            target.scrollIntoView();
         } else {
-            this.showPage('koti');
+            window.scrollTo({ top: 0, behavior: 'instant' });
         }
+
+        this.currentPage = pageId;
+        document.dispatchEvent(new CustomEvent('pagechange', { detail: { pageId } }));
+    },
+
+    focusElement(el) {
+        if (!el) return;
+        if (!el.matches('a, button, input, select, textarea, [tabindex]')) {
+            el.setAttribute('tabindex', '-1');
+        }
+        el.focus({ preventScroll: true });
     }
 };
 
 // === MOBILE MENU MODULE ===
+// The menu is a native <dialog>: showModal() keeps keyboard focus inside it,
+// Escape closes it and focus returns to the menu button afterwards.
 const MobileMenu = {
     menuButton: null,
     closeButton: null,
     menu: null,
-    navLinks: null,
-    
+
     init() {
         this.menuButton = document.getElementById('mobile-menu-button');
         this.closeButton = document.getElementById('mobile-menu-close-button');
         this.menu = document.getElementById('mobile-menu');
-        this.navLinks = document.querySelectorAll('.mobile-nav-link');
-        
-        this.setupEventListeners();
+
         this.setupLanguageSwitcher();
+
+        this.menuButton.addEventListener('click', () => this.open());
+        this.closeButton.addEventListener('click', () => this.menu.close());
+        this.menu.addEventListener('close', () => this.onClose());
+
+        // Choosing a page from the menu closes it.
+        document.addEventListener('pagechange', () => {
+            if (this.menu.open) this.menu.close();
+        });
     },
-    
+
     setupLanguageSwitcher() {
         const languageSelector = document.getElementById('lang-switcher');
         const mobileLangSwitcher = document.getElementById('mobile-lang-switcher');
-        
+
         if (languageSelector && mobileLangSwitcher) {
             mobileLangSwitcher.innerHTML = languageSelector.innerHTML;
         }
     },
-    
-    setupEventListeners() {
-        this.menuButton.addEventListener('click', () => this.open());
-        this.closeButton.addEventListener('click', () => this.close());
-        
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = link.getAttribute('href').substring(1);
-                Navigation.showPage(pageId);
-                this.close();
-            });
-        });
-        
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !this.menu.classList.contains('hidden')) {
-                this.close();
-            }
-        });
-    },
-    
+
     open() {
-        this.menu.classList.remove('hidden');
+        this.menu.showModal();
         document.body.style.overflow = 'hidden';
         this.menuButton.setAttribute('aria-expanded', 'true');
-        
-        // Focus first link
-        setTimeout(() => this.navLinks[0]?.focus(), 100);
     },
-    
-    close() {
-        this.menu.classList.add('hidden');
+
+    onClose() {
         document.body.style.overflow = '';
         this.menuButton.setAttribute('aria-expanded', 'false');
-        this.menuButton.focus();
     }
 };
 
 // === PARALLAX MODULE ===
 const Parallax = {
     heroSection: null,
+    backgrounds: [],
     ticking: false,
-    
+
     init() {
         this.heroSection = document.querySelector('.hero-slider')?.parentElement;
+        this.backgrounds = [...document.querySelectorAll('.swiper-parallax-bg')];
         if (this.heroSection) {
             window.addEventListener('scroll', () => this.onScroll(), { passive: true });
         }
     },
-    
+
     onScroll() {
         if (!this.ticking) {
             window.requestAnimationFrame(() => {
@@ -615,13 +676,12 @@ const Parallax = {
             this.ticking = true;
         }
     },
-    
+
     updateParallax() {
         const scrollTop = window.scrollY;
-        
-        if (this.heroSection && scrollTop < this.heroSection.offsetHeight) {
-            const allParallaxBgs = document.querySelectorAll('.swiper-parallax-bg');
-            allParallaxBgs.forEach(bg => {
+
+        if (scrollTop < this.heroSection.offsetHeight) {
+            this.backgrounds.forEach(bg => {
                 bg.style.transform = `translateY(${scrollTop * 0.3}px)`;
             });
         }
@@ -631,15 +691,21 @@ const Parallax = {
 // === SLIDER MODULE ===
 const Slider = {
     swiper: null,
-    
+    toggleButton: null,
+
     init() {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         this.swiper = new Swiper('.hero-slider', {
             loop: SWIPER_CONFIG.LOOP,
             effect: SWIPER_CONFIG.EFFECT,
             speed: SWIPER_CONFIG.SPEED,
-            autoplay: {
+            // Visitors who ask for reduced motion get a still slider they can
+            // move with the arrows.
+            autoplay: reduceMotion ? false : {
                 delay: SWIPER_CONFIG.AUTOPLAY_DELAY,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
             },
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -647,11 +713,40 @@ const Slider = {
             },
             parallax: true,
             a11y: {
-                prevSlideMessage: 'Edellinen dia',
-                nextSlideMessage: 'Seuraava dia',
+                prevSlideMessage: Translation.t('slider_prev'),
+                nextSlideMessage: Translation.t('slider_next'),
             }
         });
+
+        this.setupAutoplayToggle();
         this.loadDeferredBackgrounds();
+    },
+
+    // A visible pause/play button, so the slideshow can be stopped (WCAG 2.2.2).
+    setupAutoplayToggle() {
+        this.toggleButton = document.getElementById('hero-autoplay-toggle');
+        if (!this.toggleButton) return;
+
+        this.toggleButton.addEventListener('click', () => {
+            if (this.swiper.autoplay.running) {
+                this.swiper.autoplay.stop();
+            } else {
+                this.swiper.autoplay.start();
+            }
+        });
+        this.swiper.on('autoplayStart', () => this.updateAutoplayToggle());
+        this.swiper.on('autoplayStop', () => this.updateAutoplayToggle());
+        document.addEventListener('languagechange', () => this.updateAutoplayToggle());
+        this.updateAutoplayToggle();
+    },
+
+    updateAutoplayToggle() {
+        const running = this.swiper.autoplay.running;
+        const key = running ? 'slider_pause' : 'slider_play';
+        this.toggleButton.setAttribute('data-translate-aria-label', key);
+        this.toggleButton.setAttribute('aria-label', Translation.t(key));
+        this.toggleButton.querySelector('.icon-pause').classList.toggle('hidden', !running);
+        this.toggleButton.querySelector('.icon-play').classList.toggle('hidden', running);
     },
 
     // Slides after the first one get their background image only once the page
@@ -672,23 +767,27 @@ const Slider = {
 // === SCROLL ANIMATIONS MODULE ===
 const ScrollAnimations = {
     observer: null,
-    
+
     init() {
         const revealElements = document.querySelectorAll('.reveal, .reveal-slide-left, .reveal-slide-right');
-        
+
+        if (!('IntersectionObserver' in window)) {
+            revealElements.forEach(el => el.classList.add('visible'));
+            return;
+        }
+
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // Optionally unobserve after animation
-                    // this.observer.unobserve(entry.target);
+                    this.observer.unobserve(entry.target);
                 }
             });
-        }, { 
+        }, {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         });
-        
+
         revealElements.forEach(el => {
             this.observer.observe(el);
         });
@@ -696,6 +795,8 @@ const ScrollAnimations = {
 };
 
 // === TEAM MODAL MODULE ===
+// The profile popup is a native <dialog>: showModal() keeps focus inside it,
+// Escape closes it, and focus goes back to the card that opened it.
 const TeamModal = {
     modal: null,
     modalImg: null,
@@ -703,45 +804,47 @@ const TeamModal = {
     modalTitle: null,
     modalDesc: null,
     closeBtn: null,
-    
+    openMemberId: null,
+    trigger: null,
+
     members: [
-        { 
-            id: 'member1', 
-            name: 'member1_name', 
-            title: 'member1_title', 
-            desc: 'member1_desc', 
+        {
+            id: 'member1',
+            name: 'member1_name',
+            title: 'member1_title',
+            desc: 'member1_desc',
             imgSrc: 'img/team1.webp',
         },
-        { 
-            id: 'member2', 
-            name: 'member2_name', 
-            title: 'member2_title', 
-            desc: 'member2_desc', 
+        {
+            id: 'member2',
+            name: 'member2_name',
+            title: 'member2_title',
+            desc: 'member2_desc',
             imgSrc: 'img/team2.webp',
         },
-        { 
-            id: 'member3', 
-            name: 'member3_name', 
-            title: 'member3_title', 
-            desc: 'member3_desc', 
+        {
+            id: 'member3',
+            name: 'member3_name',
+            title: 'member3_title',
+            desc: 'member3_desc',
             imgSrc: 'img/team3.webp',
         },
-        { 
-            id: 'member4', 
-            name: 'member4_name', 
-            title: 'member4_title', 
-            desc: 'member4_desc', 
+        {
+            id: 'member4',
+            name: 'member4_name',
+            title: 'member4_title',
+            desc: 'member4_desc',
             imgSrc: 'img/team4.webp',
         },
-        { 
-            id: 'member5', 
-            name: 'member5_name', 
-            title: 'member5_title', 
-            desc: 'member5_desc', 
+        {
+            id: 'member5',
+            name: 'member5_name',
+            title: 'member5_title',
+            desc: 'member5_desc',
             imgSrc: 'img/team5.webp',
         },
     ],
-    
+
     init() {
         this.modal = document.getElementById('team-modal');
         this.modalImg = document.getElementById('modal-img');
@@ -749,11 +852,11 @@ const TeamModal = {
         this.modalTitle = document.getElementById('modal-title');
         this.modalDesc = document.getElementById('modal-desc');
         this.closeBtn = document.getElementById('modal-close-button');
-        
+
         this.populateTeamGrid();
         this.setupEventListeners();
     },
-    
+
     populateTeamGrid() {
         const teamGrid = document.getElementById('team-grid');
         if (!teamGrid) return;
@@ -771,19 +874,19 @@ const TeamModal = {
                 teamHTML += "<div class='lg:col-span-4 grid lg:flex gap-y-8'>";
             }
 
+            // The name is a button inside the heading; clicking anywhere on the
+            // card opens the same profile.
             teamHTML += `
-                <div class="${layoutClass} team-member-card text-center cursor-pointer group" 
-                     data-member-id="${member.id}"
-                     tabindex="0"
-                     role="button"
-                     aria-label="View ${member.name} profile">
-                    <img src="${member.imgSrc}" 
-                         alt="Picture of ${member.name}, ${member.desc}" 
-                         class="w-32 h-32 rounded-full mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                         loading="lazy"
-                         onerror="this.src='img/placeholder.jpg'">
-                    <h3 class="mt-4 text-xl font-bold" data-translate="${member.name}"></h3>
-                    <p class="text-gray-500" data-translate="${member.title}"></p>
+                <div class="${layoutClass} team-member-card text-center cursor-pointer group" data-member-id="${member.id}">
+                    <img src="${member.imgSrc}"
+                         alt=""
+                         width="128" height="128"
+                         class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                         loading="lazy" decoding="async">
+                    <h3 class="mt-4 text-xl font-bold">
+                        <button type="button" class="team-member-button" aria-haspopup="dialog" data-translate="${member.name}">${Translation.t(member.name)}</button>
+                    </h3>
+                    <p class="text-gray-500 whitespace-pre-line" data-translate="${member.title}">${Translation.t(member.title)}</p>
                 </div>
             `;
         });
@@ -794,272 +897,164 @@ const TeamModal = {
         }
         teamGrid.innerHTML = teamHTML;
     },
-    
+
     setupEventListeners() {
-        // Click events for team cards
+        // Clicks (and Enter/Space on the name button) anywhere on a card
         document.addEventListener('click', (e) => {
             const card = e.target.closest('.team-member-card');
             if (card) {
-                this.open(card.dataset.memberId);
+                this.open(card.dataset.memberId, card.querySelector('.team-member-button'));
             }
         });
-        
-        // Keyboard support for team cards
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                const card = e.target.closest('.team-member-card');
-                if (card) {
-                    e.preventDefault();
-                    this.open(card.dataset.memberId);
-                }
-            }
-        });
-        
-        // Close button
-        this.closeBtn?.addEventListener('click', () => this.close());
-        
-        // Close on backdrop click
-        this.modal?.addEventListener('click', (e) => {
+
+        this.closeBtn.addEventListener('click', () => this.modal.close());
+
+        // Close on backdrop click (the dialog itself is only hit outside the content)
+        this.modal.addEventListener('click', (e) => {
             if (e.target === this.modal) {
-                this.close();
+                this.modal.close();
             }
         });
-        
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !this.modal.classList.contains('hidden')) {
-                this.close();
-            }
+
+        this.modal.addEventListener('close', () => {
+            document.body.style.overflow = '';
+            this.trigger?.focus();
+        });
+
+        document.addEventListener('languagechange', () => {
+            if (this.modal.open) this.fill(this.openMemberId);
         });
     },
-    
-    open(memberId) {
-        const memberData = this.members.find(m => m.id === memberId);
-        if (!memberData) return;
-        
-        const lang = Translation.currentLang;
-        
-        this.modalImg.src = memberData.imgSrc;
-        this.modalImg.alt = memberData.alt;
-        this.modalName.textContent = Translation.data[lang][memberData.name];
-        this.modalTitle.textContent = Translation.data[lang][memberData.title];
-        this.modalDesc.innerHTML = Translation.data[lang][memberData.desc];
-        
-        this.modal.classList.remove('hidden');
+
+    open(memberId, trigger) {
+        if (!this.members.some(m => m.id === memberId)) return;
+
+        this.openMemberId = memberId;
+        this.trigger = trigger;
+        this.fill(memberId);
+
+        this.modal.showModal();
         document.body.style.overflow = 'hidden';
-        
-        // Focus close button
-        setTimeout(() => this.closeBtn?.focus(), 100);
     },
-    
-    close() {
-        this.modal.classList.add('hidden');
-        document.body.style.overflow = '';
-        
-        // Return focus to triggering element
-        const activeCard = document.activeElement.closest('.team-member-card');
-        activeCard?.focus();
+
+    fill(memberId) {
+        const memberData = this.members.find(m => m.id === memberId);
+        const desc = Translation.t(memberData.desc);
+
+        this.modalImg.src = memberData.imgSrc;
+        this.modalName.textContent = Translation.t(memberData.name);
+        this.modalTitle.textContent = Translation.t(memberData.title);
+        this.modalDesc.innerHTML = desc;
+        this.modalDesc.hidden = !desc;
     }
 };
 
+// === CONTACT FORM MODULE ===
+// Sends the form with fetch so the visitor stays on the page. The server
+// (send-email-db.php) answers with JSON: { success: true|false, message }.
 const FormHandler = {
-    initialized: false,
-    submitting: new WeakMap(), // Track which forms are currently submitting
-    
     init() {
-        // Prevent double initialization
-        if (this.initialized) {
-            console.warn('FormHandler already initialized');
-            return;
-        }
-        
-        this.initialized = true;
-        
         document.querySelectorAll('form').forEach(form => {
-            // Check if form already has our listener
-            if (form.dataset.formHandlerAttached === 'true') {
-                return;
-            }
-            
-            // Mark form as handled
-            form.dataset.formHandlerAttached = 'true';
-            
-            // Add submit listener
-            form.addEventListener('submit', (e) => this.handleSubmit(e), { once: false });
-            
-            console.log('FormHandler attached to form:', form.id || form.action);
+            form.addEventListener('submit', (e) => this.handleSubmit(e));
         });
     },
-    
+
     async handleSubmit(e) {
         e.preventDefault();
-        e.stopPropagation(); // Prevent event bubbling
-        
+
         const form = e.target;
-        
-        // Check if form is already submitting
-        if (this.submitting.get(form)) {
-            console.log('Form already submitting, ignoring duplicate submission');
-            return;
-        }
-        
-        const formData = new FormData(form);
-        const endpoint = form.action;
-        
-        if (!endpoint) {
-            console.error("Form action attribute is not set!");
-            this.showMessage(form, 'Konfigurointivirhe. Lomakkeen päätepiste puuttuu.', 'error');
-            return;
-        }
-        
-        // Mark form as submitting
-        this.submitting.set(form, true);
-        
-        // Show loading state
+        if (form.dataset.submitting === 'true') return;
+
         const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
+        const formData = new FormData(form);
+        formData.set('lang', Translation.currentLang);
+
+        form.dataset.submitting = 'true';
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Lähetetään...';
-        
+        submitBtn.textContent = Translation.t('form_sending');
+
         try {
-            console.log('Submitting form to:', endpoint);
-            
-            const response = await fetch(endpoint, {
+            const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
                 headers: {
                     'Accept': 'application/json'
                 }
             });
-            
-            // Get raw response text
-            const rawText = await response.text();
-            console.log('Response received:', rawText.substring(0, 100));
-            
-            // Try to parse as JSON
-            let result;
+
+            let result = {};
             try {
-                result = JSON.parse(rawText);
+                result = await response.json();
             } catch (parseError) {
-                console.error('JSON parse error:', parseError);
-                console.log('Raw response:', rawText);
-                throw new Error('Palvelin palautti virheellisen vastauksen');
+                console.error('Contact form: the server did not return JSON', parseError);
             }
-            
-            // Handle both:
-            // - Custom backend: { success: true, message: "..." }
-            // - Formspree: { ok: true, next: "/thanks" }
-            const isSuccess = result.success || result.ok;
-            
-            if (response.ok && isSuccess) {
-                // Success message
-                this.showMessage(form, 'Kiitos viestistäsi! Otamme sinuun yhteyttä pian.', 'success');
+
+            if (response.ok && result.success) {
+                this.showMessage(form, Translation.t('form_success'), 'success');
                 form.reset();
             } else {
-                // Error message from backend
-                const errorMessage = result.message || result.error || 'Jokin meni pieleen';
-                throw new Error(errorMessage);
+                this.showMessage(form, result.message || Translation.t('form_error'), 'error');
             }
-            
         } catch (error) {
-            console.error('Lähetysvirhe:', error);
-            this.showMessage(
-                form, 
-                error.message || 'Viestin lähetyksessä tapahtui virhe. Yritä uudelleen tai ota yhteyttä suoraan sähköpostitse.', 
-                'error'
-            );
+            console.error('Contact form: sending failed', error);
+            this.showMessage(form, Translation.t('form_error'), 'error');
         } finally {
-            // Re-enable button and mark as not submitting
+            form.dataset.submitting = 'false';
             submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-            this.submitting.set(form, false);
+            submitBtn.textContent = Translation.t(submitBtn.dataset.translate);
         }
     },
-    
+
     showMessage(form, message, type) {
         // Remove existing messages
-        const existingMsg = form.querySelector('.form-message');
+        const existingMsg = form.parentElement.querySelector('.form-message');
         if (existingMsg) existingMsg.remove();
-        
+
         const messageDiv = document.createElement('div');
         messageDiv.className = `form-message ${type}`;
         messageDiv.textContent = message;
-        messageDiv.setAttribute('role', 'alert');
-        
+        messageDiv.setAttribute('role', type === 'error' ? 'alert' : 'status');
+
         // Insert after the form
         form.insertAdjacentElement('afterend', messageDiv);
-        
+
         // Scroll to message
         messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
+
         // Auto-remove success messages after 10 seconds
         if (type === 'success') {
-            setTimeout(() => {
-                if (messageDiv.parentElement) {
-                    messageDiv.remove();
-                }
-            }, 10000);
+            setTimeout(() => messageDiv.remove(), 10000);
         }
     }
 };
 
-// Initialize ONLY ONCE when DOM is ready
-(function() {
-    let initialized = false;
-    
-    function initFormHandler() {
-        if (initialized) return;
-        initialized = true;
-        FormHandler.init();
-    }
-    
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initFormHandler, { once: true });
-    } else {
-        initFormHandler();
-    }
-})();
-
 // === IMAGE ERROR HANDLING ===
+// Error events do not bubble, so listen in the capture phase; this also
+// covers images added later (team cards, the profile popup).
 const ImageHandler = {
+    placeholder: 'img/placeholder.jpg',
+
     init() {
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('error', function() {
-                if (!this.dataset.errorHandled) {
-                    this.src = 'img/placeholder.jpg';
-                    this.dataset.errorHandled = 'true';
-                    console.warn(`Failed to load image: ${this.src}`);
-                }
-            });
-        });
+        document.addEventListener('error', (e) => {
+            const img = e.target;
+            if (img.tagName !== 'IMG' || img.src.endsWith(this.placeholder)) return;
+            console.warn(`Failed to load image: ${img.src}`);
+            img.src = this.placeholder;
+        }, true);
     }
 };
 
 // === INITIALIZATION ===
+// Each module starts on its own, so one failing module (for example the
+// slider) does not leave the rest of the page without its features.
 document.addEventListener('DOMContentLoaded', function() {
-    try {
-        Navigation.init();
-        MobileMenu.init();
-        Parallax.init();
-        Slider.init();
-        ScrollAnimations.init();
-        TeamModal.init();
-        FormHandler.init();
-        ImageHandler.init();
-        Translation.init();
-        
-        console.log('✅ All modules initialized successfully');
-    } catch (error) {
-        console.error('❌ Initialization error:', error);
-    }
-});
+    const modules = { ImageHandler, Translation, Navigation, MobileMenu, Parallax, Slider, ScrollAnimations, TeamModal, FormHandler };
 
-// === PERFORMANCE MONITORING (Optional) ===
-if ('performance' in window) {
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            const perfData = performance.getEntriesByType('navigation')[0];
-            console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
-        }, 0);
+    Object.entries(modules).forEach(([name, module]) => {
+        try {
+            module.init();
+        } catch (error) {
+            console.error(`${name} failed to initialize:`, error);
+        }
     });
-}
+});
