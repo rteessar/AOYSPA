@@ -114,9 +114,15 @@ body {
 }
 
 /* === NAVIGATION === */
+/* The current page is shown with a yellow underline: yellow text on white
+   is too faint to read (about 2:1 contrast, WCAG asks for 4.5:1). */
 .nav-link.active {
-    color: #d9b10d;
+    color: #333333;
     font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #f1c50e;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
 }
 
 .lang-btn {
@@ -329,6 +335,15 @@ button:focus:not(:focus-visible) {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+/* === STATISTICS === */
+/* Dark numbers with a yellow bar, for the same contrast reason as above */
+.stat-number {
+    text-decoration: underline;
+    text-decoration-color: #f1c50e;
+    text-decoration-thickness: 6px;
+    text-underline-offset: 10px;
 }
 
 /* === TEAM MEMBER CARDS === */
