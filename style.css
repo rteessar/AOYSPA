@@ -373,6 +373,8 @@ button:disabled {
 /* === SMOOTH SCROLLING === */
 html {
     scroll-behavior: smooth;
+    /* Keep link targets (e.g. #ukk) from ending up under the sticky header */
+    scroll-padding-top: 7rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

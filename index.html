@@ -4,129 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>document.documentElement.classList.add('js');</script>
-    
-<!-- SEO Meta Tags -->
-    <title>Angel Financial Services Oy - Taloudellinen Kumppanisi</title>
-    <meta name="description" content="Angel Financial Services Oy tarjoaa kirjanpito-, vero- ja yritysneuvontapalveluja Suomessa. Autamme yritystäsi menestymään.">
-    <meta name="keywords" content="kirjanpito, taloushallinto, palkanlaskenta, yrityksen perustaminen, tilinpäätös, verosuunnittelu, kirjanpitopalvelut suomi">
+
+    <!-- SEO: the title, description and social tags describe the home page in
+         Finnish. script.js updates the title, description and canonical link
+         for the other sections and for the English version (?lang=en). -->
+    <title>Tilitoimisto Helsinki – kirjanpito ja palkanlaskenta | Angel Oy</title>
+    <meta name="description" content="Tilitoimisto Helsingissä: kirjanpito, palkanlaskenta, tilinpäätös ja yrityksen perustaminen. Yli 300 tyytyväistä asiakasta, palvelu viidellä kielellä. Pyydä tarjous!">
     <meta name="author" content="Angel Financial Services Oy">
-    
-    <!-- Open Graph Meta Tags (Social Media) -->
-    <meta property="og:title" content="Angel Financial Services Oy - Taloudellinen Kumppanisi">
-    <meta property="og:description" content="Ammattitaiset kirjanpito-, palkanlaskenta- ja yritysrekisteröintipalvelut Suomessa.">
-    <meta property="og:url" content="https://angeloy.fi">
+    <meta name="robots" content="max-image-preview:large">
+
+    <!-- Language versions (the English site is this page with ?lang=en) -->
+    <link rel="alternate" hreflang="fi" href="https://angeloy.fi/">
+    <link rel="alternate" hreflang="en" href="https://angeloy.fi/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://angeloy.fi/">
+
+    <!-- Open Graph: link previews on LinkedIn, Facebook, WhatsApp, Teams... -->
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="fi_FI">
     <meta property="og:site_name" content="Angel Financial Services Oy">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Angel Financial Services Oy - Taloudellinen Kumppanisi">
-    <meta name="twitter:description" content="Ammattitaiset kirjanpito- ja yrityspalvelut Suomessa.">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://angeloy.fi">
-    
-    
-    
-    <!-- Structured Data (JSON-LD) -->
+    <meta property="og:title" content="Tilitoimisto Helsinki – kirjanpito ja palkanlaskenta | Angel Oy">
+    <meta property="og:description" content="Kirjanpito, palkanlaskenta, tilinpäätös ja yrityksen perustaminen Helsingissä. Palvelemme viidellä kielellä.">
+    <meta property="og:url" content="https://angeloy.fi/">
+    <meta property="og:locale" content="fi_FI">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:image" content="https://angeloy.fi/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Angel Financial Services – tilitoimisto Helsingissä">
+
+    <!-- X / Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tilitoimisto Helsinki – kirjanpito ja palkanlaskenta | Angel Oy">
+    <meta name="twitter:description" content="Kirjanpito, palkanlaskenta, tilinpäätös ja yrityksen perustaminen Helsingissä. Palvelemme viidellä kielellä.">
+    <meta name="twitter:image" content="https://angeloy.fi/img/og-image.jpg">
+
+    <!-- The canonical link is added by script.js on purpose: https://angeloy.fi/
+         for Finnish and https://angeloy.fi/?lang=en for English. A fixed one
+         here would tell Google the English version is a duplicate. -->
+
+    <!-- Structured Data (JSON-LD): business details for Google and other search engines -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Angel Financial Services Oy",
-      "url": "https://angeloy.fi",
-      "description": "Kirjanpito, palkanlaskenta ja yrityspalvelut",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "FI"
-      },
-      "priceRange": "$",
-      "telephone": "+358 40 129 1041",
-      "email": "info@angeloy.fi",
-      "areaServed": "FI",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Palvelut",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Kuukausikirjanpito",
-              "description": "Ammattitainen juokseva kirjanpito yrityksellesi"
-            }
+      "@graph": [
+        {
+          "@type": "AccountingService",
+          "@id": "https://angeloy.fi/#organization",
+          "name": "Angel Financial Services Oy",
+          "alternateName": "Angel Oy",
+          "url": "https://angeloy.fi/",
+          "logo": "https://angeloy.fi/img/HeaderLogo.png",
+          "image": "https://angeloy.fi/img/og-image.jpg",
+          "description": "Tilitoimisto Helsingissä: kirjanpito, palkanlaskenta, tilinpäätös, yrityksen perustaminen, verosuunnittelu ja konsultointi pienille ja keskisuurille yrityksille.",
+          "slogan": "Taloudelliset suojelusenkelisi",
+          "telephone": "+358401291041",
+          "email": "info@angeloy.fi",
+          "taxID": "3330389-2",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ruosilantie 1 A",
+            "postalCode": "00390",
+            "addressLocality": "Helsinki",
+            "addressCountry": "FI"
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Palkanlaskenta",
-              "description": "Tarkka ja luotettava palkanlaskentapalvelu"
-            }
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 60.22819,
+            "longitude": 24.81932
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Yritysrekisteröinti",
-              "description": "Autamme yrityksen perustamisessa ja rekisteröinnissä"
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "10:00",
+              "closes": "16:00"
             }
+          ],
+          "areaServed": {
+            "@type": "Country",
+            "name": "Finland"
+          },
+          "knowsLanguage": ["fi", "en", "et", "hi", "ar"],
+          "priceRange": "€",
+          "sameAs": [
+            "https://www.linkedin.com/company/angel-financial-services-oy/",
+            "https://www.facebook.com/profile.php?id=100089574093324",
+            "https://www.instagram.com/angel.financials/"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Palvelut",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yrityksen perustaminen ja rekisteröinti", "description": "Yhtiömuodon valinta, perustamisilmoitus ja rekisteröinti viranomaisille." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kuukausikirjanpito", "description": "Juokseva kirjanpito, ALV-laskelmat ja tuloslaskelmat." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tilinpäätös ja räätälöity kirjanpito", "description": "Tilinpäätösraportit, niiden analysointi ja ilmoitukset veroviranomaisille." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Palkanlaskenta", "description": "Palkat työehtosopimusten ja Suomen työlainsäädännön mukaisesti." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verosuunnittelu ja optimointi", "description": "Verosuunnittelu ja ALV-raportointi Suomen verolakien mukaisesti." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Konsultaatiot ja strateginen neuvonta", "description": "Taloudellisen tilanteen arviointi ja neuvonta liiketoimintaan." } }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://angeloy.fi/#website",
+          "url": "https://angeloy.fi/",
+          "name": "Angel Financial Services",
+          "inLanguage": ["fi", "en"],
+          "publisher": { "@id": "https://angeloy.fi/#organization" }
+        }
+      ]
     }
     </script>
-    
-    <script>
-// Dynamic meta tag updates for SPA sections
-window.addEventListener('hashchange', function() {
-    const hash = window.location.hash.substring(1) || 'koti';
-    updateMetaTags(hash);
-});
-
-function updateMetaTags(page) {
-    const metaData = {
-        koti: {
-            title: 'Angel Financial Services Oy - Kirjanpito ja Taloushallinto Helsinki',
-            description: 'Ammattitaiset kirjanpito-, palkanlaskenta- ja yrityspalvelut Helsingissä. Yli 10 vuoden kokemus, 300+ tyytyväistä asiakasta. Soita +358 40 129 1041'
-        },
-        palvelut: {
-            title: 'Palvelut - Kirjanpito, Palkanlaskenta, Yritysrekisteröinti | Angel Oy',
-            description: 'Kattavat taloushallinnon palvelut: kuukausikirjanpito, tilinpäätös, palkanlaskenta, yritysrekisteröinti, verosuunnittelu ja konsultointi Helsingissä.'
-        },
-        meista: {
-            title: 'Meistä - Angel Financial Services Oy | Talouskumppanisi',
-            description: 'Luotettava taloushallinnon kumppani pienille ja keskisuurille yrityksille Suomessa. Palvelemme viidellä kielellä ja tarjoamme digitaaliset palvelut.'
-        },
-        tiimi: {
-            title: 'Tiimimme - Kokeneet Kirjanpitäjät ja Asiantuntijat | Angel Oy',
-            description: 'Tutustuu monikulttuuriseen asiantuntijatiimimme: kokeneet kirjanpitäjät, veroneuvojat ja yritysstrategit, jotka auttavat yrityksesi menestyksessä.'
-        },
-        yhteystiedot: {
-            title: 'Yhteystiedot - Ota Yhteyttä | Angel Financial Services Oy Helsinki',
-            description: 'Ota yhteyttä taloushallinnon ammattilaisiin. Puh: +358 40 129 1041 | Ruosilantie 1 A, Helsinki. Avoinna ma-to 10-16. Ilmainen konsultaatio!'
-        }
-    };
-
-    if (metaData[page]) {
-        document.title = metaData[page].title;
-        document.querySelector('meta[name="description"]').setAttribute('content', metaData[page].description);
-        document.querySelector('link[rel="canonical"]').setAttribute('href', `https://angeloy.fi/#${page}`);
-        
-        // Update Open Graph tags
-        document.querySelector('meta[property="og:title"]').setAttribute('content', metaData[page].title);
-        document.querySelector('meta[property="og:description"]').setAttribute('content', metaData[page].description);
-        document.querySelector('meta[property="og:url"]').setAttribute('content', `https://angeloy.fi/#${page}`);
-    }
-}
-
-// Run on initial load
-document.addEventListener('DOMContentLoaded', function() {
-    const hash = window.location.hash.substring(1) || 'koti';
-    updateMetaTags(hash);
-});
-</script>
     
     <!-- Google Analytics (Replace with your tracking ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKFD5FNL62"></script>
@@ -157,6 +144,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <script src="vendor/swiper/swiper-bundle.min.js" defer></script>
     <script src="script.js?v=20260930" defer></script>
+
+    <!-- Without JavaScript, show every section one after another -->
+    <noscript><style>main.page[hidden] { display: block; }</style></noscript>
 </head>
 <body class="overflow-x-hidden">
     <a href="#page-container" class="skip-to-content" data-skip-link data-translate="skip_link">Siirry sisältöön</a>
@@ -237,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div id="page-container">
 
         <!-- KOTI PAGE -->
-        <main data-page-id="koti" class="page">
+        <main id="koti" data-page-id="koti" class="page">
             
             <!-- Section 1: Hero Slider -->
             <section class="relative h-[calc(100vh-6rem)] w-full">
@@ -428,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </main>
         
         <!-- PALVELUT PAGE -->
-        <main data-page-id="palvelut" class="page" hidden>
+        <main id="palvelut" data-page-id="palvelut" class="page" hidden>
             <!-- Section 1: Hero -->
             <section class="parallax-bg h-[60vh] relative flex items-center justify-center overflow-hidden" style="background-image: url('img/palvelut-hero.webp');">
                 <div class="absolute inset-0 bg-black/40"></div>
@@ -567,7 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </main>
 
         <!-- MEISTÄ PAGE -->
-        <main data-page-id="meista" class="page bg-brand-gray" hidden>
+        <main id="meista" data-page-id="meista" class="page bg-brand-gray" hidden>
             
             <!-- Section 1: Intro -->
             <section class="py-20 lg:py-28 overflow-hidden">
@@ -712,7 +702,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </main>
 
         <!-- TIIMI PAGE -->
-        <main data-page-id="tiimi" class="page" hidden>
+        <main id="tiimi" data-page-id="tiimi" class="page" hidden>
             <!-- Section 1: Hero -->
             <section class="relative bg-cover bg-center py-40" style="background-image: url('img/tiimi-hero.webp');">
                 <div class="absolute inset-0 bg-black opacity-55"></div>
@@ -754,7 +744,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </main>
         
         <!-- YHTEYSTIEDOT PAGE -->
-        <main data-page-id="yhteystiedot" class="page" hidden>
+        <main id="yhteystiedot" data-page-id="yhteystiedot" class="page" hidden>
              <!-- Section 1: Contact Info & Form -->
             <section class="relative bg-cover bg-center py-20 lg:py-32" style="background-image: url('img/contact-bg.webp');">
                 <div class="absolute inset-0 bg-black opacity-65"></div>

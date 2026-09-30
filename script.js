@@ -13,6 +13,9 @@ const SWIPER_CONFIG = {
 // === TRANSLATION MODULE ===
 const Translation = {
     currentLang: 'fi',
+    // Languages offered in the switcher. The Estonian (et) texts below are
+    // not finished yet, so Estonian is not offered.
+    languages: ['fi', 'en'],
     
     data: {
         fi: {
@@ -505,6 +508,7 @@ const Translation = {
         });
 
         document.documentElement.lang = lang;
+        this.updateUrl(lang);
 
         // Store preference
         try {
@@ -514,6 +518,20 @@ const Translation = {
         }
 
         document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang } }));
+    },
+
+    // Keep the language in the address (?lang=en) so the English version can be
+    // shared and found by search engines. Finnish is the default without it.
+    updateUrl(lang) {
+        const url = new URL(window.location.href);
+        if (lang === 'fi') {
+            url.searchParams.delete('lang');
+        } else {
+            url.searchParams.set('lang', lang);
+        }
+        if (url.href !== window.location.href) {
+            history.replaceState(history.state, '', url);
+        }
     },
 
     // Look up a single string in the current language (falls back to Finnish).
@@ -528,12 +546,16 @@ const Translation = {
             if (btn) this.set(btn.dataset.lang);
         });
 
-        let lang = 'fi';
-        try {
-            const savedLang = localStorage.getItem('preferred_language');
-            if (savedLang && this.data[savedLang]) lang = savedLang;
-        } catch (e) {
-            console.warn('localStorage not available');
+        // A language in the address wins over the one saved earlier.
+        let lang = new URLSearchParams(window.location.search).get('lang');
+        if (!this.languages.includes(lang)) {
+            lang = 'fi';
+            try {
+                const savedLang = localStorage.getItem('preferred_language');
+                if (this.languages.includes(savedLang)) lang = savedLang;
+            } catch (e) {
+                console.warn('localStorage not available');
+            }
         }
         this.set(lang);
     }
@@ -1068,6 +1090,83 @@ const FormHandler = {
     }
 };
 
+// === SEO MODULE ===
+// Keeps the browser title, meta description and canonical link in line with
+// the visible section and language. Search engines index two addresses:
+// https://angeloy.fi/ (Finnish) and https://angeloy.fi/?lang=en (English).
+const Seo = {
+    baseUrl: 'https://angeloy.fi/',
+
+    pages: {
+        fi: {
+            koti: {
+                title: 'Tilitoimisto Helsinki – kirjanpito ja palkanlaskenta | Angel Oy',
+                description: 'Tilitoimisto Helsingissä: kirjanpito, palkanlaskenta, tilinpäätös ja yrityksen perustaminen. Yli 300 tyytyväistä asiakasta, palvelu viidellä kielellä. Pyydä tarjous!'
+            },
+            palvelut: {
+                title: 'Palvelut – kirjanpito, tilinpäätös, palkat ja verot | Angel Oy',
+                description: 'Kuukausikirjanpito, ALV-laskelmat, tilinpäätös, palkanlaskenta, yrityksen perustaminen, verosuunnittelu ja konsultointi pienille ja keskisuurille yrityksille.'
+            },
+            meista: {
+                title: 'Meistä – tilitoimisto pk-yrityksille Helsingissä | Angel Oy',
+                description: 'Angel Financial Services Oy tukee pieniä ja keskisuuria yrityksiä taloushallinnossa ja veroasioissa. Kaikki palvelut myös digitaalisesti.'
+            },
+            tiimi: {
+                title: 'Tiimimme – kokeneet kirjanpitäjät ja talousasiantuntijat | Angel Oy',
+                description: 'Tutustu monikulttuuriseen tiimiimme: kokeneet kirjanpitäjät, veroasiantuntijat ja talousneuvonantajat, jotka palvelevat viidellä kielellä.'
+            },
+            yhteystiedot: {
+                title: 'Yhteystiedot – Ruosilantie 1 A, Helsinki | Angel Oy',
+                description: 'Ota yhteyttä: +358 40 129 1041, info@angeloy.fi. Ruosilantie 1 A, 00390 Helsinki. Avoinna ma–to 10–16, pe verkossa 10–16.'
+            }
+        },
+        en: {
+            koti: {
+                title: 'Accounting Firm in Helsinki – Bookkeeping & Payroll | Angel Oy',
+                description: 'Accounting firm in Helsinki: bookkeeping, payroll, financial statements and company registration. 300+ satisfied clients, service in five languages. Ask for a quote!'
+            },
+            palvelut: {
+                title: 'Services – Bookkeeping, Payroll, Company Registration & Tax | Angel Oy',
+                description: 'Monthly bookkeeping, VAT calculations, financial statements, payroll, company registration, tax planning and consulting for small and medium-sized businesses in Finland.'
+            },
+            meista: {
+                title: 'About Us – Accounting Partner for SMEs in Finland | Angel Oy',
+                description: 'Angel Financial Services Oy supports small and medium-sized businesses with financial administration and taxes. All services are also available online.'
+            },
+            tiimi: {
+                title: 'Our Team – Experienced Accountants in Helsinki | Angel Oy',
+                description: 'Meet our multicultural team of experienced accountants, tax specialists and financial advisors, serving you in five languages.'
+            },
+            yhteystiedot: {
+                title: 'Contact – Ruosilantie 1 A, Helsinki | Angel Oy',
+                description: 'Contact us: +358 40 129 1041, info@angeloy.fi. Ruosilantie 1 A, 00390 Helsinki. Open Mon–Thu 10–16, Fri online 10–16.'
+            }
+        }
+    },
+
+    init() {
+        document.addEventListener('pagechange', () => this.update());
+        document.addEventListener('languagechange', () => this.update());
+        this.update();
+    },
+
+    update() {
+        const lang = this.pages[Translation.currentLang] ? Translation.currentLang : 'fi';
+        const page = this.pages[lang][Navigation.currentPage] || this.pages[lang].koti;
+
+        document.title = page.title;
+        document.querySelector('meta[name="description"]')?.setAttribute('content', page.description);
+
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement('link');
+            canonical.rel = 'canonical';
+            document.head.appendChild(canonical);
+        }
+        canonical.href = lang === 'fi' ? this.baseUrl : `${this.baseUrl}?lang=${lang}`;
+    }
+};
+
 // === IMAGE ERROR HANDLING ===
 // Error events do not bubble, so listen in the capture phase; this also
 // covers images added later (team cards, the profile popup).
@@ -1088,7 +1187,7 @@ const ImageHandler = {
 // Each module starts on its own, so one failing module (for example the
 // slider) does not leave the rest of the page without its features.
 document.addEventListener('DOMContentLoaded', function() {
-    const modules = { ImageHandler, Translation, Navigation, MobileMenu, Parallax, Slider, ScrollAnimations, TeamModal, FormHandler };
+    const modules = { ImageHandler, Translation, Navigation, Seo, MobileMenu, Parallax, Slider, ScrollAnimations, TeamModal, FormHandler };
 
     Object.entries(modules).forEach(([name, module]) => {
         try {
